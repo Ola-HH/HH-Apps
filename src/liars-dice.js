@@ -11,8 +11,8 @@ const LiarsDice = () => {
       <div className="game-settings">
       <p className="second-title">Velg antall terninger du skal starte med</p>
       <Slider onChange={(handleChange)} className="slider" valueLabelDisplay="auto" defaultValue={5} step={1} marks min={1} max={10} />
-      <p className="slider-comment">Du har valgt {numberOfDices} terninger</p>
-      <Button onClick={startLiars} variant="contained">Start</Button>
+      <p className="slider-comment">Du har valgt 5 terninger</p>
+      <Button onMouseDown={startLiars} variant="contained">Start</Button>
       </div>
       <div className="game-content"> 
           <p>Terninger</p>
@@ -34,7 +34,7 @@ let dices;
 
 const handleChange = (e, val) => {
   numberOfDices = val;
-  document.querySelectorAll('.slider-comment').forEach((el)=>el.innerHTML = `Du har valgt ${numberOfDices} terninger`)
+  document.querySelectorAll('.slider-comment').forEach((el)=>el.innerHTML = `Du har valgt ${numberOfDices} terninger`);
 }
 
 const showDices = () => {
@@ -54,17 +54,19 @@ const startLiars = () => {
     dice.src = require(`./6dice.png`);
     document.querySelectorAll('.dice-container').forEach(el => el.appendChild(dice));
   }
-  document.querySelectorAll('.game-settings').forEach((el) => el.style.display = 'none');
-  document.querySelectorAll('.game-content').forEach((el) => el.style.display = 'block');
+  setTimeout(()=> {
+    document.querySelectorAll('.game-settings').forEach((el) => el.style.display = 'none');
+    document.querySelectorAll('.game-content').forEach((el) => el.style.display = 'block');
+  }, 100)
 }
 
 const throwDice = () => {
   dices = dices.map(() => Math.floor(Math.random() * 6) + 1).sort()
-  document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateY(180deg)');
+  document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(180deg)');
   setTimeout(()=> {
-    document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateY(0deg)');
+    document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(0deg)');
     showDices();
-  }, 300)
+  }, 400)
 }
 
 const removeDice = () => {
