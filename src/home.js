@@ -22,7 +22,6 @@ const Home = () => {
           </NavLink> 
         </ButtonGroup>
       </div>
-      <p>Test of changes</p>
     </div>
     
   );
