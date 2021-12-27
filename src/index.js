@@ -15,6 +15,7 @@ ReactDOM.render(
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/hh-apps" element={<Home />} />
       <Route path="/liars-dice" element={<LiarsDice />} />
       <Route path="/gruble" element={<Gruble />} />
     </Routes>
