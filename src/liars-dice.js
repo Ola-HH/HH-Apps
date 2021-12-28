@@ -57,16 +57,18 @@ const startLiars = () => {
   setTimeout(()=> {
     document.querySelectorAll('.game-settings').forEach((el) => el.style.display = 'none');
     document.querySelectorAll('.game-content').forEach((el) => el.style.display = 'block');
-  }, 100)
+  }, 200)
 }
 
 const throwDice = () => {
   dices = dices.map(() => Math.floor(Math.random() * 6) + 1).sort()
-  document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(180deg)');
+  document.querySelectorAll('.dice').forEach((el)=>el.style.transition = '0.6s');
+  document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(360deg)');
+  setTimeout(showDices, 400);
   setTimeout(()=> {
+    document.querySelectorAll('.dice').forEach((el)=>el.style.transition = '0s');
     document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(0deg)');
-    showDices();
-  }, 400)
+  }, 600);
 }
 
 const removeDice = () => {

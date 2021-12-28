@@ -84,8 +84,13 @@ code {
   left: 5px;
 }
 
-button:disabled, button:disabled:hover {
+.start-btn:disabled, .start-btn:disabled:hover {
   background-color: gray;
+  cursor: default;
+}
+
+.new-letter-btn:disabled, .new-letter-btn:disabled:hover {
+  color: gray;
   cursor: default;
 }
 
@@ -199,12 +204,9 @@ button:disabled, button:disabled:hover {
 
 .countdown {
   width: 90% !important;
-  margin-top: 10px !important;
-  margin-bottom: 5px !important;
-}
-
-.countdown > .MuiSlider-thumb {
-  display: none !important;
+  margin: 20px 5% !important;
+  height: 15px !important;
+  border-radius: 15px !important;
 }
 
 .start-btn {
