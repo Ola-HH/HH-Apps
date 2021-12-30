@@ -84,34 +84,8 @@ code {
   left: 5px;
 }
 
-.start-btn:disabled, .start-btn:disabled:hover {
-  background-color: gray;
-  cursor: default;
-}
-
-.new-letter-btn:disabled, .new-letter-btn:disabled:hover {
-  color: gray;
-  cursor: default;
-}
-
 .home-button-group {
   position: relative;
-}
-
-.game-content {
-  display: none;
-  text-align: center;
-  justify-content: center;
-  width: 100vw;
-}
-
-.menu-icon {
-  font-size: 50px !important;
-  color: #2b88d8 !important;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  display: none !important;
 }
 
 .dice-container {
@@ -130,13 +104,9 @@ code {
   transition: 600ms;
 }
 
-.dice-button {
-  margin-top: 20px !important;
-  width: 51%;
-}
-
-.restart-button {
-  display: none;
+.hh-btn {
+  margin: 10px 5px !important;
+  width: 40%;
 }
 
 .topic {
@@ -147,10 +117,6 @@ code {
 .letter-btn {
   width: 200px;
   margin: 5px !important;
-}
-
-.modal-container {
-  display: none;
 }
 
 .overlay {
@@ -165,7 +131,7 @@ code {
 
 .modal {
   width: 50vw;
-  height: 400px;
+  height: auto;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
@@ -191,17 +157,6 @@ code {
   left: 10px;
 }
 
-.new-letter-container {
-  position: absolute !important;
-  bottom: 10px !important;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.new-letter-btn {
-  width: 250px;
-}
-
 .countdown {
   width: 90% !important;
   margin: 20px 5% !important;
@@ -214,12 +169,17 @@ code {
 }
 
 @media screen and (max-width: 992px) {
-  .slider {
-    width: 80vw !important;
+  .slider, .hh-btn {
+    width: 80% !important;
+    margin: 5px !important;
   }
 
   .dice-container {
     max-width: 90vw;
+  }
+
+  .dice {
+    width: 50px;
   }
 
   .nav-button-group {
