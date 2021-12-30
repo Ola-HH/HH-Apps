@@ -14,6 +14,11 @@ code {
     monospace;
 }
 
+.lenke, .lenke:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+
 .page-content {
   display: block;
   text-align: center;
@@ -30,6 +35,7 @@ code {
   font-size: x-large;
   margin-bottom: 40px;
 }
+
 
 .slider {
   width: 50vw !important;

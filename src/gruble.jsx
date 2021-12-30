@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { Divider } from "@mui/material";
 import { LinearProgress } from "@mui/material";
-let brukteTemaer = [];
+import Pdf from './gruble.pdf';
 
 function Gruble() {
   const [time, setTime] = useState(75);
@@ -87,10 +87,11 @@ function Gruble() {
     return () => clearInterval(i);  
   } 
   }, [timeLeft, timerActive]);
-  
+
   return (
     <div className="page-content">
       <p className="site-title">Gruble</p>
+      <p>Last ned grubleark <a href={Pdf} target="_blank" className="lenke" rel="noreferrer">her!</a></p> 
       <p className="second-title">Velg hvor lang tid hver runde skal vare</p>
       <Slider onChange={handleChange} className="slider" valueLabelDisplay="auto" defaultValue={75} step={15} marks min={45} max={450} />
       <p className="slider-comment">Du har valgt {time} sekunder</p>
