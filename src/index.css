@@ -19,6 +19,10 @@ code {
   text-decoration: underline;
 }
 
+.meny {
+  width: 80vw !important;
+}
+
 .page-content {
   display: block;
   text-align: center;
@@ -112,7 +116,7 @@ code {
 
 .hh-btn {
   margin: 10px 5px !important;
-  width: 40%;
+  width: 40% !important;
 }
 
 .topic {
