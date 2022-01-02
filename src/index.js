@@ -7,7 +7,8 @@ import {
   Home,
   Navigation,
   LiarsDice,
-  Gruble
+  Gruble,
+  Hangman
 } from "./components";
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/hh-apps" element={<Home />} />
       <Route path="/liars-dice" element={<LiarsDice />} />
       <Route path="/gruble" element={<Gruble />} />
+      <Route path="/hangman" element={<Hangman />} />
     </Routes>
   </Router>,
   document.getElementById('root')

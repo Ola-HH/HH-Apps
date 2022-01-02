@@ -27,6 +27,11 @@ const Navigation = () => {
                 Gruble
               </Button>
             </NavLink> 
+            <NavLink to="/hangman">
+              <Button className="nav-button" variant="outlined">
+                Hangman
+              </Button>
+            </NavLink> 
           </ButtonGroup>
           </div>
       </nav>

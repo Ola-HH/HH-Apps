@@ -45,7 +45,7 @@ const LiarsDice = () => {
             <p>Du har {dices.length} terninger igjen</p>
             <div className="dice-container">
               {dices.map((val, i) => (
-                <img key={i} className="dice" src={require(`./${dices[i]}dice.png`)} alt="test" />
+                <img key={i} className="dice" src={require(`./dices/${dices[i]}dice.png`)} alt="test" />
               ))}
             </div>
             <HHButton icon={<ShuffleIcon />} text="Kast terningene" click={throwDice} /> <br></br>

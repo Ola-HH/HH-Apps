@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/Button';
-import HHButton from "./HH-Button";
+import HomeButton from "./HomeButton";
 
 const Home = () => {
   return (
@@ -10,15 +9,17 @@ const Home = () => {
       <p className="site-title">Velkommen til HH Apps</p>
       <p className="second-title">Velg et spill!</p>
       <div>
-        <ButtonGroup orientation="vertical" aria-label="vertical outlined button group" className="meny">
+        <div className="meny">
           <NavLink to="/liars-dice">
-            <HHButton text="Liars dice" />         
+            <HomeButton className="home-btn" text="Liars dice" />       
           </NavLink>
-          <br></br>
           <NavLink to="/gruble">
-            <HHButton text="Gruble" />  
+            <HomeButton className="home-btn" text="Gruble" />  
           </NavLink> 
-        </ButtonGroup>
+          <NavLink to="/hangman">
+            <HomeButton className="home-btn" text="Hangman"/>  
+          </NavLink> 
+        </div>
       </div>
     </div>
     

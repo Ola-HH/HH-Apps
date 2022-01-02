@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #393e46;
   color: #eee;
+  overflow-x: hidden;
 }
 
 code {
@@ -21,6 +22,11 @@ code {
 
 .meny {
   width: 80vw !important;
+}
+
+.home-btn {
+  width: 40vw !important;
+  margin: 10px 30vw !important;
 }
 
 .page-content {
@@ -178,6 +184,15 @@ code {
   margin-bottom: 15px !important;
 }
 
+.description {
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 992px) {
   .slider, .hh-btn {
     width: 80% !important;
@@ -205,7 +220,7 @@ code {
     margin: 5px;
   }
 
-  .modal {
+  .modal, .description {
     width: 80vw;
   }
 
