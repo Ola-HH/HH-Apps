@@ -59,7 +59,7 @@ const Hangman = () => {
           <p className="site-title">Hangman</p>
           <HHButton text="Vis/skjul regler" click={handleRules} />
           { rules ? (
-          <p className="description">På rundgang skal alle deltagere gjette på hver sin bokstav. Svarer du feil må du ta en slurk. Er du sistemann til å svare feil, slik at spillet er tapt, må du drikke opp resten av drikka du har i glasset. Er du sistemann til å svare riktig, slik at spilet er vunnet, kan du dele ut 5 slurker.</p>
+          <p className="description">På rundgang skal alle deltagere gjette på hver sin bokstav. Svarer du feil må du ta en slurk. Er du sistemann til å svare feil, slik at spillet er tapt, må du drikke opp resten av drikka du har i glasset. Er du sistemann til å svare riktig, slik at spillet er vunnet, kan du dele ut 5 slurker.</p>
           ):("")}
           <br></br>
           <HHButton text="Få nytt ord" click={newWord} />

@@ -2,26 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {
-  Home,
-  Navigation,
-  LiarsDice,
-  Gruble,
-  Hangman
-} from "./components";
+import { BrowserRouter } from "react-router-dom";
+import Theme from './Theme';
 
 ReactDOM.render(
-  <Router>
-    <Navigation />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/hh-apps" element={<Home />} />
-      <Route path="/liars-dice" element={<LiarsDice />} />
-      <Route path="/gruble" element={<Gruble />} />
-      <Route path="/hangman" element={<Hangman />} />
-    </Routes>
-  </Router>,
+  <BrowserRouter>
+    <Theme />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

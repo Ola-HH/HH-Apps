@@ -1,28 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from '@mui/material/Button';
-import HomeButton from "./HomeButton";
+import { Link as RouterLink } from "react-router-dom";
+import { Button, ButtonGroup, Stack } from '@mui/material';
 
 const Home = () => {
   return (
-    <div className="page-content">
+    <Stack>
       <p className="site-title">Velkommen til HH Apps</p>
       <p className="second-title">Velg et spill!</p>
-      <div>
-        <div className="meny">
-          <NavLink to="/liars-dice">
-            <HomeButton className="home-btn" text="Liars dice" />       
-          </NavLink>
-          <NavLink to="/gruble">
-            <HomeButton className="home-btn" text="Gruble" />  
-          </NavLink> 
-          <NavLink to="/hangman">
-            <HomeButton className="home-btn" text="Hangman"/>  
-          </NavLink> 
-        </div>
-      </div>
-    </div>
-    
+      <ButtonGroup orientation="vertical" size="large" fullWidth>
+        <Button component={RouterLink} to="liarsdice">
+            Liars dice
+        </Button>
+        <Button component={RouterLink} to="gruble">
+            Gruble
+        </Button>  
+        <Button component={RouterLink} to="hangman">
+            Hangman
+        </Button>
+      </ButtonGroup>
+    </Stack>
   );
 }
 
