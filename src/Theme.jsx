@@ -9,10 +9,10 @@ import NoMatch from './NoMatch';
 import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
-import { blue } from '@mui/material/colors'
+import { lightBlue } from '@mui/material/colors'
 
 const Theme = () => {
-    const theme = createTheme({ palette: {mode: "dark", primary: {main: blue[500]}}});
+    const theme = createTheme({ palette: {mode: "dark", primary: {main: lightBlue[500]}}});
     return (
         <StyledEngineProvider>
             <ThemeProvider theme={responsiveFontSizes(theme)}>
