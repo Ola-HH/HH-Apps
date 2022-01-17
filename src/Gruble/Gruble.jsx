@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Slider } from "@mui/material";
-import HHButton from "./HH-Button";
+import { Box, Dialog, Link, Slider, Stack, Typography } from "@mui/material";
+import HHButton from "../HH-Button";
 import { Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { Divider } from "@mui/material";
@@ -57,6 +57,7 @@ function Gruble() {
   const showLetter = () => handleLetters(1)
 
   const handleLetters = (a) => {
+    setTimeLeft(time)
     setModalOpen(true)
     if (a < 2) {
       setLetters(bokstaver[Math.floor(Math.random() * bokstaver.length)])
@@ -89,47 +90,52 @@ function Gruble() {
   }, [timeLeft, timerActive]);
 
   return (
-    <div className="page-content">
-      <p className="site-title">Gruble</p>
-      <p>Last ned grubleark <a href={Pdf} target="_blank" className="lenke" rel="noreferrer">her!</a></p> 
-      <p className="second-title">Velg hvor lang tid hver runde skal vare</p>
-      <Slider onChange={handleChange} className="slider" valueLabelDisplay="auto" defaultValue={75} step={15} marks min={45} max={450} />
-      <p className="slider-comment">Du har valgt {time} sekunder</p>
+    <Stack textAlign="center" spacing={2}>
+      <Typography variant="h3" color="primary">Gruble</Typography>
+      <Link variant="h7" href={Pdf} target="_blank" rel="noreferrer">Last ned grubleark her!</Link>
+      <Typography variant="h6" color="primary">Velg hvor lang tid hver runde skal vare</Typography>
+      <Slider onChange={handleChange} valueLabelDisplay="auto" defaultValue={75} step={15} marks min={45} max={450} />
+      <Typography variant="h7" color="primary">Du har valgt {time} sekunder</Typography>
       <HHButton click={showTopic} text="Vis nye temaer" />
     { currentTopics.length > 0 ? (
-      <div className="game-content">
-        <div className="topic-container">
+      <>
+        <Box >
           {currentTopics.map((val, i) => (
-                <p key={i} className="topic"> {currentTopics[i]} </p>
+                <Typography variant="h6" key={i} color="primary"> {currentTopics[i]} </Typography>
             ))}
-        </div>
+        </Box>
         <HHButton click={showLetter} text="Få en bokstav"/>
         <HHButton click={showLetters} text="Få fem bokstaver" />
-      </div>
+      </>
     ):''}
 
-      { modalOpen === true ? (
-        <div className="modal-container">
-          <div onClick={closeModal} className="overlay" />
-          <div className="modal"> 
-            <CloseIcon onClick={closeModal} className="close-icon"/>
-            <p className="letters">{letters}</p>
-            <Divider>Tid</Divider>
-            <LinearProgress className="countdown" variant="determinate" value={(time - timeLeft)/time * 100} min={0} max={100}/>
-            <p className="time-remain">Det er {timeLeft} sekunder igjen</p>
-            {!timerActive ? (
-            <>
-            <HHButton className="start-btn" click={startTime} text="Start tiden" /> 
-            <Divider variant="middle">Nye bokstaver</Divider>
-            <Button onClick={showLetter}>Få en ny bokstav</Button>
-            <Divider variant="middle" sx={{width: 1/2, margin: 'auto'}}/>  
-            <Button onClick={showLetters}>Få fem ny bokstaver</Button>
-            </>
+        <Dialog
+        fullWidth
+        open={modalOpen}
+        onClose={closeModal}
+        sx={{textAlign: "center", py: "20px"}}
+        >
+          <CloseIcon onClick={closeModal} sx={{ position: "absolute", top: 5, right: 5, cursor: "pointer"}}/>
+          <Stack width={9/10} spacing={1.5} sx={{position: "relative", left: "5%", my: 1}}>
+          <Typography variant="h3" color="primary">{letters}</Typography>
+          <Divider color="primary">Tid</Divider>
+          <LinearProgress variant="determinate" value={(time - timeLeft)/time * 100} min={0} max={100}
+          sx={{
+            height: 10, borderRadius: 5
+          }}/>
+          <Typography variant="h7" color="primary">Det er {timeLeft} sekunder igjen</Typography>
+          {!timerActive ? (
+            <Stack>
+            <Button onClick={startTime} variant="outlined" sx={{mb: 2}}>Start tiden</Button>
+              <Divider variant="middle">Nye bokstaver</Divider>
+              <Button onClick={showLetter}>Få en ny bokstav</Button>
+              <Divider variant="middle" sx={{width: 1/2, margin: 'auto'}}/>  
+              <Button onClick={showLetters}>Få fem ny bokstaver</Button>
+            </Stack>
             ):("")}
-          </div>
-        </div>
-      ):""}
-    </div>
+          </Stack>
+        </Dialog>
+    </Stack>
   );
 }
 

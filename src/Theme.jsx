@@ -1,23 +1,69 @@
-import React from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Navigation from './Navigation';
 import Home from './Home';
-import LiarsDice from './LiarsDice';
-import Gruble from './Gruble';
-import Hangman from './Hangman';
+import LiarsDice from './Liarsdice/LiarsDice';
+import Gruble from './Gruble/Gruble';
+import Hangman from './Hangman/Hangman';
 import NoMatch from './NoMatch';
-import { Container, CssBaseline } from '@mui/material'
+import { Button, Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
-import { lightBlue } from '@mui/material/colors'
+import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
+import { positions } from '@mui/system';
 
 const Theme = () => {
-    const theme = createTheme({ palette: {mode: "dark", primary: {main: lightBlue[500]}}});
+
+    const [mode, setMode] = useState(localStorage.getItem("hhAppsMode"))
+
+    const handleMode = () => {
+        if (mode === "light") {
+        setMode("dark")
+        localStorage.setItem("hhAppsMode", "dark");
+        } else {
+        setMode("light")
+        localStorage.setItem("hhAppsMode", "light");
+        }
+    };
+    
+    const [theme, setTheme] = useState(createTheme({ palette: 
+        {
+        mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
+        primary: {main: "#2B88D8"},
+        secondary: {main: "#34dbf4"},
+        }
+    }));
+
+    useEffect(()=>{
+        setTheme(createTheme({ palette: 
+            {
+            mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
+            primary: {main: "#2B88D8"},
+            secondary: {main: "#34dbf4"},
+            }
+        }));
+    }, [mode])
+
+    /* const theme = createTheme({ palette: 
+        {
+        mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
+        primary: {main: "#2B88D8"},
+        secondary: {main: "#34dbf4"},
+        }
+    }); */
+    
+
+
     return (
         <StyledEngineProvider>
             <ThemeProvider theme={responsiveFontSizes(theme)}>
                 <CssBaseline />
                 <Navigation />
+                {mode === "light" ? (
+                <DarkModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64}}/>
+                ):(
+                <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
+                )}
                 <Container maxWidth="md">
                 <Routes>
                     <Route path="/" element={<Home />} />

@@ -1,9 +1,9 @@
-import { Slider } from "@mui/material";
+import { Avatar, Slider, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-import HHButton from "./HH-Button";
+import HHButton from "../HH-Button";
 
 const LiarsDice = () => {
   const [dices, setDices] = useState(Array(5).fill(6));
@@ -29,38 +29,38 @@ const LiarsDice = () => {
   }
 
   return (
-    <div className="page-content">
-      <p className="site-title">Liars Dice</p>
+    <Stack textAlign="center" spacing={2}>
+      <Typography variant="h3" color="primary">Liars dice</Typography>
       {!started ? (
-        <div className="game-settings">
-          <p className="second-title">Velg antall terninger du skal starte med</p>
+        <Stack spacing={2}>
+          <Typography variant="h6" color="primary">Velg antall terninger du skal starte med</Typography>
           <Slider onChange={(handleChange)} className="slider" valueLabelDisplay="auto" step={1} marks min={1} max={10} value={dices.length} />
-          <p className="slider-comment">Du har valgt {dices.length} terninger</p>
+          <Typography variant="body1" color="primary">Du har valgt {dices.length} terninger</Typography>
           <HHButton click={startLiars} text="Start" />
-        </div>
+        </Stack>
       ) : (    
         <>
       { dices.length ? (
-        <div> 
-            <p>Du har {dices.length} terninger igjen</p>
-            <div className="dice-container">
+        <> 
+            <Stack direction="row" justifyContent="center" sx={{ flexWrap: "wrap"}}>
               {dices.map((val, i) => (
-                <img key={i} className="dice" src={require(`./dices/${dices[i]}dice.png`)} alt="test" />
+                <Avatar key={i} src={require(`./dices/${dices[i]}dice.png`)} alt="test" sx={{
+                  borderRadius: 0, width: 50, height: 50, margin: 1
+                }}/>
               ))}
-            </div>
-            <HHButton icon={<ShuffleIcon />} text="Kast terningene" click={throwDice} /> <br></br>
+            </Stack>
+            <Typography variant="body1" color="primary">Du har {dices.length} terninger igjen</Typography>
+            <HHButton icon={<ShuffleIcon />} text="Kast terningene" click={throwDice} />
             <HHButton icon={<DeleteIcon />} text="Fjern en terning" click={removeDice} colorType="error" />
-        </div>
+        </>
         ) : (
-          <div className="restart-button">
             <HHButton icon={<RestartAltIcon />} click={restartDice} text="Start på nytt" />
-          </div>
         )
       }
       </>
       )
     }
-    </div>
+    </Stack>
   );
 }
 

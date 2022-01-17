@@ -1,12 +1,12 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Button, ButtonGroup, Stack } from '@mui/material';
+import { Button, ButtonGroup, Stack, Typography } from '@mui/material';
 
 const Home = () => {
   return (
-    <Stack>
-      <p className="site-title">Velkommen til HH Apps</p>
-      <p className="second-title">Velg et spill!</p>
+    <Stack textAlign="center" spacing={2}>
+      <Typography variant="h3" color="primary">Velkommen til HH Apps</Typography>
+      <Typography variant="h6" color="primary">Velg et spill!</Typography>
       <ButtonGroup orientation="vertical" size="large" fullWidth>
         <Button component={RouterLink} to="liarsdice">
             Liars dice
