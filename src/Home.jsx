@@ -9,7 +9,7 @@ const Home = () => {
       <Typography variant="h6" color="primary">Velg et spill!</Typography>
       <ButtonGroup orientation="vertical" size="large" fullWidth>
         <Button component={RouterLink} to="liarsdice">
-            Liars dice
+            Liar's dice
         </Button>
         <Button component={RouterLink} to="gruble">
             Gruble
