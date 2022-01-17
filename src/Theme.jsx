@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Navigation from './Navigation';
 import Home from './Home';
@@ -6,11 +6,10 @@ import LiarsDice from './Liarsdice/LiarsDice';
 import Gruble from './Gruble/Gruble';
 import Hangman from './Hangman/Hangman';
 import NoMatch from './NoMatch';
-import { Button, Container, CssBaseline } from '@mui/material'
+import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
-import { positions } from '@mui/system';
 
 const Theme = () => {
 
