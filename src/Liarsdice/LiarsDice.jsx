@@ -8,6 +8,7 @@ import HHButton from "../HH-Button";
 const LiarsDice = () => {
   const [dices, setDices] = useState(Array(5).fill(6));
   const [started, setStarted] = useState(false);
+  const [rotate, setRotate] = useState(false)
 
   const handleChange = (e, val) => setDices(Array(val).fill(6));
   const startLiars = () => setStarted(true); 
@@ -20,11 +21,9 @@ const LiarsDice = () => {
 
   const throwDice = () => {
     setDices(dices.map(() => Math.floor(Math.random() * 6) + 1).sort());
-    document.querySelectorAll('.dice').forEach((el)=>el.style.transition = '0.6s');
-    document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(360deg)');
+    setRotate(true)
     setTimeout(()=> {
-      document.querySelectorAll('.dice').forEach((el)=>el.style.transition = '0s');
-      document.querySelectorAll('.dice').forEach((el)=>el.style.transform = 'rotateZ(0deg)');
+      setRotate(false)
     }, 600);
   }
 
@@ -45,7 +44,9 @@ const LiarsDice = () => {
             <Stack direction="row" justifyContent="center" sx={{ flexWrap: "wrap"}}>
               {dices.map((val, i) => (
                 <Avatar key={i} src={require(`./dices/${dices[i]}dice.png`)} alt="test" sx={{
-                  borderRadius: 0, width: 50, height: 50, margin: 1
+                  borderRadius: 0, width: 50, height: 50, margin: 1, 
+                  transition: rotate ? "0.6s" : "0", 
+                  transform: rotate ? "rotateZ(360deg)" : "rotateZ(0deg)"
                 }}/>
               ))}
             </Stack>
