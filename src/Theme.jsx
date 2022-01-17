@@ -64,7 +64,7 @@ const Theme = () => {
                 <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
                 )}
                 <Container maxWidth="md">
-                <Routes>
+                <Routes basename="/hh-apps">  
                     <Route path="/" element={<Home />} />
                     <Route path="liarsdice" element={<LiarsDice />} />
                     <Route path="gruble" element={<Gruble />} />
