@@ -47,7 +47,7 @@ const Navigation = () => {
                 sx={{
                   color: location.pathname === "/liarsdice" ? "secondary" : "primary", 
                 }}>         
-                Liars dice
+                Liar's dice
               </Button>
               <Button component={RouterLink} to="gruble" variant="outlined"
                 sx={{
