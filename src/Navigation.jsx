@@ -7,7 +7,6 @@ import { Box } from "@mui/system";
 const Navigation = () => {
 
   /* const [mode, setMode] = useState(localStorage.getItem("hhAppsMode"))
-
   const handleMode = () => {
     if (mode === "light") {
       setMode("dark")
