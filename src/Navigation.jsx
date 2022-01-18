@@ -61,6 +61,12 @@ const Navigation = () => {
                 }}>         
                 Hangman
               </Button>
+              <Button component={RouterLink} to="ringoffire" variant="outlined"
+                sx={{
+                  color: location.pathname === "/ringoffire" ? "secondary" : "primary", 
+                }}>         
+                Ring of fire
+              </Button>
           </ButtonGroup>
         </Box>
   );

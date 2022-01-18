@@ -10,6 +10,7 @@ import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
+import Ringoffire from './Ringoffire/Ringoffire';
 
 const Theme = () => {
 
@@ -64,11 +65,12 @@ const Theme = () => {
                 <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
                 )}
                 <Container maxWidth="md">
-                <Routes basename="/hh-apps">  
+                <Routes>  
                     <Route path="/" element={<Home />} />
                     <Route path="liarsdice" element={<LiarsDice />} />
                     <Route path="gruble" element={<Gruble />} />
                     <Route path="hangman" element={<Hangman />} />
+                    <Route path="ringoffire" element={<Ringoffire />} />
                     <Route path="*" element={<NoMatch />} />
                 </Routes>
                 </Container>

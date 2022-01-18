@@ -17,6 +17,9 @@ const Home = () => {
         <Button component={RouterLink} to="hangman">
             Hangman
         </Button>
+        <Button component={RouterLink} to="ringoffire">
+            Ring of fire
+        </Button>
       </ButtonGroup>
     </Stack>
   );
