@@ -47,22 +47,22 @@ function Ringoffire() {
       src: "2_of_spades.png"
     },{
       title: "Kategori",
-      desc: "Spilleren som trekker kortet velger en kategori, som for eksempel fotballspillere. Spilleren som valgte kategori sier deretter et ord innenfor denne kategorien, som for eksempel Cristiano Ronaldo. Deretter skal den til venstre si et annet ord i samme kategori. Førstemann som sier et ord som er sagt eller bruker for lang tid må ta en slurk.",
+      desc: "Spilleren som trekker kortet velger en kategori, som for eksempel fotballspillere. Spilleren som valgte kategori sier deretter et ord innenfor denne kategorien, som for eksempel Cristiano Ronaldo. Deretter skal den til venstre si et annet ord i samme kategori. Runden fortsetter til venstre rundt bordet. Førstemann som sier et ord som er sagt eller bruker for lang tid må ta to slurker.",
       src: "3_of_clubs.png"
     },
     {
       title: "Kategori",
-      desc: "Spilleren som trekker kortet velger en kategori, som for eksempel fotballspillere. Spilleren som valgte kategori sier deretter et ord innenfor denne kategorien, som for eksempel Cristiano Ronaldo. Deretter skal den til venstre si et annet ord i samme kategori. Førstemann som sier et ord som er sagt eller bruker for lang tid må ta en slurk.",
+      desc: "Spilleren som trekker kortet velger en kategori, som for eksempel fotballspillere. Spilleren som valgte kategori sier deretter et ord innenfor denne kategorien, som for eksempel Cristiano Ronaldo. Deretter skal den til venstre si et annet ord i samme kategori. Runden fortsetter til venstre rundt bordet. Førstemann som sier et ord som er sagt eller bruker for lang tid må ta to slurker.",
       src: "3_of_diamonds.png"
     },
     {
       title: "Minstemann",
-      desc: "Sammenlign drikka du har i glasset, boksen etc. med personen til venstre for deg. Den av dere som har minst igjen må drikke opp resten.",
+      desc: "Sammenlign drikka du har i glasset, boksen etc. med drikka til personen til venstre for deg. Den av dere som har minst igjen må drikke opp resten.",
       src: "3_of_hearts.png"
     },
     {
       title: "Minstemann",
-      desc: "Sammenlign drikka du har i glasset, boksen etc. med personen til venstre for deg. Den av dere som har minst igjen må drikke opp resten.",
+      desc: "Sammenlign drikka du har i glasset, boksen etc. med drikka til personen til venstre for deg. Den av dere som har minst igjen må drikke opp resten.",
       src: "3_of_spades.png"
     },{
       title: "Journalist",
@@ -152,12 +152,12 @@ function Ringoffire() {
     },
     {
       title: "Gangeleken",
-      desc: "Spilleren som trekker kortet velger et tall høyere enn 2, for eksempel 6. (Ikke velg samme antall som spillere). Spilleren starter deretter å telle ved å si en. Personen til venstre sier to osv. Når man kommer til et tall som er delelig med tallet som ble valgt skal man si «SKÅL» istedenfor tallet. Førstemann som sier feil eller bruker for lang tid må ta en slurk. Tar det for lang tid legger spilleren som trakk kortet til et nytt tall, og begynner på nytt.",
+      desc: "Spilleren som trekker kortet velger et tall høyere enn 2, for eksempel 6. (Ikke velg samme antall som spillere). Spilleren starter deretter å telle ved å si en. Personen til venstre sier to osv. Når man kommer til et tall som er delelig med tallet som ble valgt skal man si «SKÅL» istedenfor tallet. Førstemann som sier feil eller bruker for lang tid må ta tre slurker. Tar det for lang tid legger spilleren som trakk kortet til et nytt tall, og begynner på nytt.",
       src: "8_of_hearts.png"
     },
     {
       title: "Gangeleken",
-      desc: "Spilleren som trekker kortet velger et tall høyere enn 2, for eksempel 6. (Ikke velg samme antall som spillere). Spilleren starter deretter å telle ved å si en. Personen til venstre sier to osv. Når man kommer til et tall som er delelig med tallet som ble valgt skal man si «SKÅL» istedenfor tallet. Førstemann som sier feil eller bruker for lang tid må ta en slurk. Tar det for lang tid legger spilleren som trakk kortet til et nytt tall, og begynner på nytt.",
+      desc: "Spilleren som trekker kortet velger et tall høyere enn 2, for eksempel 6. (Ikke velg samme antall som spillere). Spilleren starter deretter å telle ved å si en. Personen til venstre sier to osv. Når man kommer til et tall som er delelig med tallet som ble valgt skal man si «SKÅL» istedenfor tallet. Førstemann som sier feil eller bruker for lang tid må ta tre slurker. Tar det for lang tid legger spilleren som trakk kortet til et nytt tall, og begynner på nytt.",
       src: "8_of_spades.png"
     },{
       title: "Presten",
@@ -171,12 +171,12 @@ function Ringoffire() {
     },
     {
       title: "Husnummer",
-      desc: "Spilleren som trekker kortet må fortelle om han bor på en adresse med partall- eller oddetallsnummer. Alle som bor i samme type nummer må ta en slurk, inkludert spilleren som trakk.",
+      desc: "Spilleren som trekker kortet må fortelle om han bor på en adresse med partall- eller oddetallsnummer. Alle som bor i samme type nummer må ta to slurker, inkludert spilleren som trakk.",
       src: "9_of_hearts.png"
     },
     {
       title: "Husnummer",
-      desc: "Spilleren som trekker kortet må fortelle om han bor på en adresse med partall- eller oddetallsnummer. Alle som bor i samme type nummer må ta en slurk, inkludert spilleren som trakk.",
+      desc: "Spilleren som trekker kortet må fortelle om han bor på en adresse med partall- eller oddetallsnummer. Alle som bor i samme type nummer må ta to slurker, inkludert spilleren som trakk.",
       src: "9_of_spades.png"
     },{
       title: "Fossen",
@@ -199,22 +199,22 @@ function Ringoffire() {
       src: "10_of_spades.png"
     },{
       title: "Klovnen",
-      desc: "Spilleren som trakk dette kortet er nå klovn, og får et minutt til å få de rundt bordet til å le. Oppgaven er over når førstemann ler. Den første som ler må ta en slurk. Dersom ingen ler i løpet av 60 sekunder må klovnen selv ta en slurk.",
+      desc: "Spilleren som trakk dette kortet er nå klovn, og får et minutt til å få de rundt bordet til å le. Oppgaven er over når førstemann ler. Den første som ler må ta en slurk. Dersom ingen ler i løpet av 60 sekunder må klovnen selv ta tre slurker.",
       src: "jack_of_clubs.png"
     },
     {
       title: "Klovnen",
-      desc: "Spilleren som trakk dette kortet er nå klovn, og får et minutt til å få de rundt bordet til å le. Oppgaven er over når førstemann ler. Den første som ler må ta en slurk. Dersom ingen ler i løpet av 60 sekunder må klovnen selv ta en slurk.",
+      desc: "Spilleren som trakk dette kortet er nå klovn, og får et minutt til å få de rundt bordet til å le. Oppgaven er over når førstemann ler. Den første som ler må ta en slurk. Dersom ingen ler i løpet av 60 sekunder må klovnen selv ta tre slurker.",
       src: "jack_of_diamonds.png"
     },
     {
       title: "Rim",
-      desc: "Spilleren som trakk kortet skal si et ord. Personen til venstre skal deretter si et ord som rimer på det ordet. Dette fortsetter mot venstre. Førstemann som sier et ord som er brukt eller bruker for lang tid må ta en slurk.",
+      desc: "Spilleren som trakk kortet skal si et ord. Personen til venstre skal deretter si et ord som rimer på det ordet. Dette fortsetter mot venstre. Førstemann som sier et ord som er brukt eller bruker for lang tid må ta to slurker.",
       src: "jack_of_hearts.png"
     },
     {
       title: "Rim",
-      desc: "Spilleren som trakk kortet skal si et ord. Personen til venstre skal deretter si et ord som rimer på det ordet. Dette fortsetter mot venstre. Førstemann som sier et ord som er brukt eller bruker for lang tid må ta en slurk.",
+      desc: "Spilleren som trakk kortet skal si et ord. Personen til venstre skal deretter si et ord som rimer på det ordet. Dette fortsetter mot venstre. Førstemann som sier et ord som er brukt eller bruker for lang tid må ta to slurker.",
       src: "jack_of_spades.png"
     },{
       title: "Klappeleken",
@@ -237,7 +237,7 @@ function Ringoffire() {
       src: "queen_of_spades.png"
     },{
       title: "Mr. Freeze",
-      desc: "Mr. Freeze kan når som helt fryse helt, og ikke bevege en muskel eller si noe. Alle rundt bordet må da gjøre det samme. Sistemann som fryser må ta en slurk. Egenskapen kan kun brukes en gang.",
+      desc: "Mr. Freeze kan når som helt fryse helt, og ikke bevege en muskel eller si noe. Alle rundt bordet må da gjøre det samme. Sistemann som fryser må ta to slurker. Egenskapen kan kun brukes en gang.",
       src: "king_of_clubs.png"
     },
     {
@@ -252,7 +252,7 @@ function Ringoffire() {
     },
     {
       title: "Mr. Freeze",
-      desc: "Mr. Freeze kan når som helt fryse helt, og ikke bevege en muskel eller si noe. Alle rundt bordet må da gjøre det samme. Sistemann som fryser må ta en slurk. Egenskapen kan kun brukes en gang.",
+      desc: "Mr. Freeze kan når som helt fryse helt, og ikke bevege en muskel eller si noe. Alle rundt bordet må da gjøre det samme. Sistemann som fryser må ta to slurker. Egenskapen kan kun brukes en gang.",
       src: "king_of_spades.png"
     }
   ]
