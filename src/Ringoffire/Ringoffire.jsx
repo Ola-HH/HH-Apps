@@ -267,9 +267,8 @@ function Ringoffire() {
     }
     for (let i = 0; i < 2; i++) {
       const random = Math.floor(Math.random()* cards.length)
-      const temporaryUsed = [];
-      temporaryUsed.concat(usedCards);
-      if (temporaryUsed.includes(random)) {
+      if (usedCards.includes(random)) {
+        console.log("fungerer")
         i--;
         continue
       }
