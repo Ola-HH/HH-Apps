@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.0db0a2e5.js",
+    "main.js": "/static/js/main.ea365a16.js",
     "static/js/787.b69586ea.chunk.js": "/static/js/787.b69586ea.chunk.js",
     "static/media/queen_of_clubs.png": "/static/media/queen_of_clubs.ef480115313c1c393699.png",
     "static/media/king_of_hearts.png": "/static/media/king_of_hearts.67c7a87603fdc5b5e2f7.png",
@@ -28,6 +28,7 @@
     "static/media/8_of_spades.png": "/static/media/8_of_spades.c8c922f0e9779cf2714c.png",
     "static/media/9_of_hearts.png": "/static/media/9_of_hearts.a896f989e7771ab21ac1.png",
     "static/media/9_of_diamonds.png": "/static/media/9_of_diamonds.ae87f8c3139247ba2314.png",
+    "static/media/ace_of_spades2.png": "/static/media/ace_of_spades2.158d0fe16c1f66b602a9.png",
     "static/media/ace_of_clubs.png": "/static/media/ace_of_clubs.f2dd09c014f9a968db89.png",
     "static/media/black_joker.png": "/static/media/black_joker.43a9a2c0616894aeedb1.png",
     "static/media/7_of_clubs.png": "/static/media/7_of_clubs.efd12036d5769f6b5a56.png",
@@ -71,10 +72,10 @@
     "static/media/3dice.png": "/static/media/3dice.8a0a83c2a50c6eee35e4.png",
     "static/media/4dice.png": "/static/media/4dice.8e794482b0005bae18b9.png",
     "index.html": "/index.html",
-    "main.0db0a2e5.js.map": "/static/js/main.0db0a2e5.js.map",
+    "main.ea365a16.js.map": "/static/js/main.ea365a16.js.map",
     "787.b69586ea.chunk.js.map": "/static/js/787.b69586ea.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0db0a2e5.js"
+    "static/js/main.ea365a16.js"
   ]
 }
