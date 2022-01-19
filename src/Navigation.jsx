@@ -1,23 +1,11 @@
-/* import React, { useState } from "react"; */
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Button, ButtonGroup, Avatar, Divider} from "@mui/material";
+import { Button, ButtonGroup, Avatar, Divider, Typography} from "@mui/material";
 import { Box } from "@mui/system";
-/* import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material"; */
+import { useIsAuthenticated } from "@azure/msal-react";
+import { SignInButton } from "./SignInButton";
 
 const Navigation = () => {
-
-  /* const [mode, setMode] = useState(localStorage.getItem("hhAppsMode"))
-  const handleMode = () => {
-    if (mode === "light") {
-      setMode("dark")
-      localStorage.setItem("hhAppsMode", "dark");
-    } else {
-      setMode("light")
-      localStorage.setItem("hhAppsMode", "light");
-    }
-    console.log(localStorage) 
-  }; */
-
+  const isAuthenticated = useIsAuthenticated();
   const location = useLocation();
   return (
       <Box fullwidth alignItems="center" sx={{
@@ -25,14 +13,9 @@ const Navigation = () => {
         boxShadow: "0px 1px 6px black", display: "flex", height: 50, mb: 2
       }}>
           <Avatar component={RouterLink} to="/" src={require('./hh.logo.png')} alt="Logo" sx={{ ml:0.8 }} />
-          <Divider orientation="vertical" sx={{ m: 1 }}/>
-          {/* {mode === "light" ? (
-            <DarkModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer" }}/>
-          ):(
-            <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer" }}/>
-          )} */}
+          <Divider orientation="vertical" sx={{ m: 1, mr: 10 }}/>
           <ButtonGroup variant="text" sx={{
-            position: "absolute", right: 10, display: {
+            position: "absolute", left: "50%", transform: "translateX(-50%)", display: {
               sm: "inline-block",
               xs: "none"
             }
@@ -68,6 +51,9 @@ const Navigation = () => {
                 Ring of fire
               </Button>
           </ButtonGroup>
+          { isAuthenticated ? <Typography color="primary" sx={{
+            position: "absolute", right: 10
+          }}>Innlogget</Typography> : <SignInButton/> }
         </Box>
   );
 }

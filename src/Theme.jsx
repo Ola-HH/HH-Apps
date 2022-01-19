@@ -5,12 +5,12 @@ import Home from './Home';
 import LiarsDice from './Liarsdice/LiarsDice';
 import Gruble from './Gruble/Gruble';
 import Hangman from './Hangman/Hangman';
+import Ringoffire from './Ringoffire/Ringoffire';
 import NoMatch from './NoMatch';
 import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
-import Ringoffire from './Ringoffire/Ringoffire';
 
 const Theme = () => {
 
@@ -42,17 +42,7 @@ const Theme = () => {
             secondary: {main: "#34dbf4"},
             }
         }));
-    }, [mode])
-
-    /* const theme = createTheme({ palette: 
-        {
-        mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
-        primary: {main: "#2B88D8"},
-        secondary: {main: "#34dbf4"},
-        }
-    }); */
-    
-
+    }, [mode])    
 
     return (
         <StyledEngineProvider>
