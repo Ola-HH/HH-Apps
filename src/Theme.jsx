@@ -11,6 +11,21 @@ import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
+import { useMsal } from '@azure/msal-react';
+import { loginRequest } from './authConfig';
+import { Button } from 'bootstrap';
+
+function ProfileContent() {
+    const { accounts } = useMsal();
+
+    const name = accounts[0] && accounts[0].name;
+    console.log(accounts)
+    return (
+        <>
+            <h5 className="card-title">Welcome {name}</h5>
+        </>
+    );
+};
 
 const Theme = () => {
 
@@ -55,6 +70,7 @@ const Theme = () => {
                 <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
                 )}
                 <Container maxWidth="md">
+                <ProfileContent></ProfileContent>
                 <Routes>  
                     <Route path="/" element={<Home />} />
                     <Route path="liarsdice" element={<LiarsDice />} />

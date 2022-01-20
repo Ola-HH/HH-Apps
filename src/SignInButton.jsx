@@ -4,7 +4,7 @@ import { loginRequest } from "./authConfig";
 import { Button } from "@mui/material";
 
 function handleLogin(instance) {
-    instance.loginPopup(loginRequest).catch(e => {
+    instance.loginRedirect(loginRequest).catch(e => {
         console.error(e);
     });
 }
