@@ -1,8 +1,19 @@
-import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Button, ButtonGroup, Avatar, Divider, Typography} from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import { Avatar, Divider, Typography} from "@mui/material";
 import { Box } from "@mui/system";
-import { useIsAuthenticated } from "@azure/msal-react";
+import { useIsAuthenticated, useMsal } from "@azure/msal-react";
 import { SignInButton } from "./SignInButton";
+
+function ProfileContent() {
+  const { accounts } = useMsal();
+
+  const name = accounts[0] && accounts[0].name;
+  return (
+      <>
+          {name}
+      </>
+  );
+};
 
 const Navigation = () => {
   const isAuthenticated = useIsAuthenticated();
@@ -15,7 +26,7 @@ const Navigation = () => {
           <Divider orientation="vertical" sx={{ m: 1, mr: 10 }}/>
           { isAuthenticated ? <Typography color="primary" sx={{
             position: "absolute", right: 10
-          }}>Innlogget</Typography> : <SignInButton/> }
+          }}><ProfileContent /></Typography> : <SignInButton/> }
         </Box>
   );
 }
