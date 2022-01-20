@@ -29,7 +29,8 @@ const Navigation = () => {
           <Divider orientation="vertical" sx={{ m: 1, height: "40px !important" }}/>
           { isAuthenticated ? <Typography color="primary" sx={{
             position: "absolute", right: 10
-          }}><ProfileContent /></Typography> : <SignInButton/> }
+          }}><ProfileContent /></Typography> : <Box sx={{position: "absolute", right: "10px"}}>
+            <SignInButton/></Box>}
         </Box>
   );
 }

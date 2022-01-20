@@ -7,10 +7,12 @@ import Gruble from './Gruble/Gruble';
 import Hangman from './Hangman/Hangman';
 import Ringoffire from './Ringoffire/Ringoffire';
 import NoMatch from './NoMatch';
-import { Container, CssBaseline } from '@mui/material'
+import { Container, CssBaseline, Stack, Typography } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
+import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react';
+import { SignInButton } from './SignInButton';
 
 const Theme = () => {
 
@@ -42,7 +44,7 @@ const Theme = () => {
             secondary: {main: "#34dbf4"},
             }
         }));
-    }, [mode])    
+    }, [mode])
 
     return (
         <StyledEngineProvider>
@@ -55,14 +57,22 @@ const Theme = () => {
                 <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
                 )}
                 <Container maxWidth="md">
-                <Routes>  
-                    <Route path="/" element={<Home />} />
-                    <Route path="liarsdice" element={<LiarsDice />} />
-                    <Route path="gruble" element={<Gruble />} />
-                    <Route path="hangman" element={<Hangman />} />
-                    <Route path="ringoffire" element={<Ringoffire />} />
-                    <Route path="*" element={<NoMatch />} />
-                </Routes>
+                <AuthenticatedTemplate>
+                    <Routes>  
+                        <Route path="/" element={<Home />} />
+                        <Route path="liarsdice" element={<LiarsDice />} />
+                        <Route path="gruble" element={<Gruble />} />
+                        <Route path="hangman" element={<Hangman />} />
+                        <Route path="ringoffire" element={<Ringoffire />} />
+                        <Route path="*" element={<NoMatch />} />
+                    </Routes>
+                </AuthenticatedTemplate>
+                <UnauthenticatedTemplate> 
+                    <Stack textAlign="center" spacing={2}>
+                        <Typography variant="h4" color="primary">Du er ikke innlogget!</Typography>
+                        <SignInButton/>
+                    </Stack>
+                </UnauthenticatedTemplate>
                 </Container>
             </ThemeProvider>
         </StyledEngineProvider>

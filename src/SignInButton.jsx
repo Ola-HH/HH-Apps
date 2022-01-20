@@ -16,8 +16,6 @@ export const SignInButton = () => {
     const { instance } = useMsal();
 
     return (
-        <Button variant="text" className="ml-auto" onClick={() => handleLogin(instance)} sx={{
-            position: "absolute", right: 5
-        }}>Logg inn</Button>
+        <Button variant="text" className="ml-auto" onClick={() => handleLogin(instance)}>Logg inn</Button>
     );
 }
