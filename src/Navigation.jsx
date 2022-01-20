@@ -23,7 +23,7 @@ const Navigation = () => {
         boxShadow: "0px 1px 6px black", display: "flex", height: 50, mb: 2
       }}>
           <Avatar component={RouterLink} to="/" src={require('./hh.logo.png')} alt="Logo" sx={{ ml:0.8 }} />
-          <Divider orientation="vertical" sx={{ m: 1, mr: 10 }}/>
+          <Divider orientation="vertical" sx={{ m: 1, height: "40px !important" }}/>
           { isAuthenticated ? <Typography color="primary" sx={{
             position: "absolute", right: 10
           }}><ProfileContent /></Typography> : <SignInButton/> }
