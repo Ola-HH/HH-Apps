@@ -12,7 +12,6 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
 const Theme = () => {
-
     const [mode, setMode] = useState(localStorage.getItem("hhAppsMode"))
 
     const handleMode = () => {
@@ -55,12 +54,14 @@ const Theme = () => {
                 )}
                 <Container maxWidth="md">
                     <Routes>  
-                        <Route path="/" element={<Home />} />
-                        <Route path="liarsdice" element={<LiarsDice />} />
-                        <Route path="gruble" element={<Gruble />} />
-                        <Route path="hangman" element={<Hangman />} />
-                        <Route path="ringoffire" element={<Ringoffire />} />
-                        <Route path="*" element={<NoMatch />} />
+                       
+                            <Route exact path="/" element={<Home />} />
+                            <Route path="liarsdice" element={<LiarsDice />} />
+                            <Route path="gruble" element={<Gruble />} />
+                            <Route path="hangman" element={<Hangman />} />
+                            <Route path="ringoffire" element={<Ringoffire />} />
+                            <Route path="*" element={<NoMatch />} />
+                        
                     </Routes>
                 </Container>
             </ThemeProvider>
