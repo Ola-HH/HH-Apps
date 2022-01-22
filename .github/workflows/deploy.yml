@@ -19,8 +19,6 @@ jobs:
       run: npm install
     - name: Build page
       run: npm run build
-      env:
-        REACT_APP_CLIENT_ID: ${{ secrets.REACT_APP_CLIENT_ID }}
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
