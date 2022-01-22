@@ -8,6 +8,7 @@ import { PublicClientApplication } from "@azure/msal-browser";
 import { MsalProvider } from "@azure/msal-react";
 import { msalConfig } from "./authConfig";
 const msalInstance = new PublicClientApplication(msalConfig);
+console.log(process.env.REACT_APP_CLIENT_ID)
 
 ReactDOM.render(
   <MsalProvider instance={msalInstance}>
