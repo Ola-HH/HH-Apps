@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Theme from './Theme';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { PublicClientApplication } from "@azure/msal-browser";
@@ -11,9 +11,9 @@ const msalInstance = new PublicClientApplication(msalConfig);
 
 ReactDOM.render(
   <MsalProvider instance={msalInstance}>
-    <HashRouter>
+    <BrowserRouter>
       <Theme />
-    </HashRouter>
+    </BrowserRouter>
   </MsalProvider>,
   document.getElementById('root')
 );
