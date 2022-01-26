@@ -17,9 +17,9 @@ function ProfileContent() {
 
 const Navigation = () => {
   let isAuthenticated = useIsAuthenticated();
-  if (window.location.hostname === "localhost") {
+/*   if (window.location.hostname === "localhost") {
     isAuthenticated = true;
-  }
+  } */
   return (
       <Box fullwidth alignItems="center" sx={{
         backgroundColor: "nav",

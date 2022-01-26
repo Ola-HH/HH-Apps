@@ -2,6 +2,7 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Button, ButtonGroup, Stack, Typography } from '@mui/material';
 
+console.log(process.env.REACT_APP_CLIENT_ID)
 
 const Home = () => {
   return (
