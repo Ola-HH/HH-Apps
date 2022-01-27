@@ -37,7 +37,7 @@ const Theme = () => {
             {
             mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
             primary: {main: "#2B88D8"},
-            secondary: {main: "#34dbf4"},
+            secondary: {main: localStorage.getItem("hhAppsMode") === "light" ? "#DDD" : "#222"},
             }
         }));
     }, [mode])
@@ -48,9 +48,9 @@ const Theme = () => {
                 <CssBaseline />
                 <Navigation />
                 {mode === "light" ? (
-                <DarkModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64}}/>
+                <DarkModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "fixed", top: 13, left: 64}}/>
                 ):(
-                <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "absolute", top: 13, left: 64 }}/>
+                <LightModeOutlined color="primary" onClick={handleMode} sx={{ cursor: "pointer", position: "fixed", top: 13, left: 64 }}/>
                 )}
                 <Container maxWidth="md">
                     <Routes>  
