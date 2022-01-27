@@ -76,7 +76,6 @@ const Navigation = () => {
       >
         <DialogTitle color="primary" mb={10}>Hei, <FirstName/> </DialogTitle>
         <SignOutButton/>
-        <Typography>{mode}</Typography>
         <CloseIcon onClick={closeModal} sx={{ position: "absolute", top: 5, right: 5, cursor: "pointer"}}/>
       </Dialog>
     </>
