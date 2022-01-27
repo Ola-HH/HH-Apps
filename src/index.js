@@ -12,7 +12,7 @@ const msalInstance = new PublicClientApplication(msalConfig);
 ReactDOM.render(
   <MsalProvider instance={msalInstance}>
     <BrowserRouter>
-      <Theme />
+        <Theme />
     </BrowserRouter>
   </MsalProvider>,
   document.getElementById('root')
