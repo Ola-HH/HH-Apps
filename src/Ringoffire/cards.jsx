@@ -275,22 +275,22 @@ export const noCards = [
       src: "ace_of_spades.png"
     }, {
       title: "Drink",
-      desc: "Drink two sips yourself.",
+      desc: "The player who drew this card has to take two sips.",
       src: "2_of_clubs.png"
     },
     {
       title: "Drink",
-      desc: "Drink two sips yourself.",
+      desc: "The player who drew this card has to take two sips.",
       src: "2_of_diamonds.png"
     },
     {
       title: "Drink",
-      desc: "Drink two sips yourself.",
+      desc: "The player who drew this card has to take two sips.",
       src: "2_of_hearts.png"
     },
     {
       title: "Drink",
-      desc: "Drink two sips yourself.",
+      desc: "The player who drew this card has to take two sips.",
       src: "2_of_spades.png"
     },{
       title: "Category",
@@ -313,12 +313,12 @@ export const noCards = [
       src: "3_of_spades.png"
     },{
       title: "Journalist",
-      desc: "From now on, it is not allowed to answer questions from the player who drew this card, who now is a journalist. If someone answers questions from the journalist, they must take a sip. If someone answers «No comment» to a question from the journalist, the journalist himself must take a sip. This lasts until someone else becomes a journalist.",
+      desc: "The person who drew this card is now a journalist, and the other players are not allowed to answer questions from the journalist. If someone answers a questions from the journalist, they must take a sip. If someone answers «No comment» to a question from the journalist, the journalist has to take a sip. This lasts until someone else becomes a journalist.",
       src: "4_of_clubs.png"
     },
     {
       title: "Journalist",
-      desc: "From now on, it is not allowed to answer questions from the player who drew this card, who now is a journalist. If someone answers questions from the journalist, they must take a sip. If someone answers «No comment» to a question from the journalist, the journalist himself must take a sip. This lasts until someone else becomes a journalist.",
+      desc: "The person who drew this card is now a journalist, and the other players are not allowed to answer questions from the journalist. If someone answers a questions from the journalist, they must take a sip. If someone answers «No comment» to a question from the journalist, the journalist has to take a sip. This lasts until someone else becomes a journalist.",
       src: "4_of_diamonds.png"
     },
     {
@@ -342,12 +342,12 @@ export const noCards = [
     },
     {
       title: "The politician",
-      desc: "The player who drew this card is now a politician, and can therefore not answer specifically yes or no. If the politician uses either the word yes or no, he must take a sip. This last until someone else becomes a politician.",
+      desc: "The player who drew this card is now a politician, and can therefore not answer questions using the words yes or no. If they use the words, they must take a sip. This lasts until someone else becomes a politician.",
       src: "5_of_hearts.png"
     },
     {
       title: "The politician",
-      desc: "The player who drew this card is now a politician, and can therefore not answer specifically yes or no. If the politician uses either the word yes or no, he must take a sip. This last until someone else becomes a politician.",
+      desc: "The player who drew this card is now a politician, and can therefore not answer questions using the words yes or no. If they use the words, they must take a sip. This lasts until someone else becomes a politician.",
       src: "5_of_spades.png"
     },{
       title: "Black and white",
@@ -370,22 +370,22 @@ export const noCards = [
       src: "6_of_spades.png"
     },{
       title: "The lie detector",
-      desc: "The players around the table can now agree upon a question to ask the player who drew this card. This player must answer honestly. If the player refuse to answer, he must take three sips.",
+      desc: "The players around the table can now agree upon a question to ask the player who drew this card. This player must answer honestly. If the player refuses to answer, they must take three sips.",
       src: "7_of_clubs.png"
     },
     {
       title: "The lie detector",
-      desc: "The players around the table can now agree upon a question to ask the player who drew this card. This player must answer honestly. If the player refuse to answer, he must take three sips.",
+      desc: "The players around the table can now agree upon a question to ask the player who drew this card. This player must answer honestly. If the player refuses to answer, they must take three sips.",
       src: "7_of_diamonds.png"
     },
     {
       title: "The fortune teller",
-      desc: "The player who drew this card drew a seven. The player must now guess whether the next player gets a card with a higher or lower value. Aces have the lowest value, kings have the highest value. If the player guesses correctly, all other players must take a sip, if the player guesses incorrectly, he must take a sip himself.",
+      desc: "The player who drew this card drew a seven. The player must now guess whether the next player gets a card with a higher or lower value. Aces have the lowest value, kings have the highest value. If the player guesses correctly, all other players must take a sip. If the player guesses incorrectly, they must take a sip themselves.",
       src: "7_of_hearts.png"
     },
     {
       title: "The fortune teller",
-      desc: "The player who drew this card drew a seven. The player must now guess whether the next player gets a card with a higher or lower value. Aces have the lowest value, kings have the highest value. If the player guesses correctly, all other players must take a sip, if the player guesses incorrectly, he must take a sip himself.",
+      desc: "The player who drew this card drew a seven. The player must now guess whether the next player gets a card with a higher or lower value. Aces have the lowest value, kings have the highest value. If the player guesses correctly, all other players must take a sip. If the player guesses incorrectly, they must take a sip themselves.",
       src: "7_of_spades.png"
     },{
       title: "Poisonous eyes",
@@ -408,22 +408,22 @@ export const noCards = [
       src: "8_of_spades.png"
     },{
       title: "The priest",
-      desc: "The player who drew this card is now a priest, and is therefore not allowed to swear. If the priest swears, he must take a sip. This lasts until someone else becomes a priest.",
+      desc: "The player who drew this card is now a priest, and is therefore not allowed to swear. If the priest swears, they must take a sip. This lasts until someone else becomes a priest.",
       src: "9_of_clubs.png"
     },
     {
       title: "The priest",
-      desc: "The player who drew this card is now a priest, and is therefore not allowed to swear. If the priest swears, he must take a sip. This lasts until someone else becomes a priest.",
+      desc: "The player who drew this card is now a priest, and is therefore not allowed to swear. If the priest swears, they must take a sip. This lasts until someone else becomes a priest.",
       src: "9_of_diamonds.png"
     },
     {
       title: "House number",
-      desc: "The player who drew this card must tell if he lives on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
+      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
       src: "9_of_hearts.png"
     },
     {
       title: "House number",
-      desc: "The player who drew this card must tell if he lives on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
+      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
       src: "9_of_spades.png"
     },{
       title: "Waterfall",
@@ -437,12 +437,12 @@ export const noCards = [
     },
     {
       title: "Poker face",
-      desc: "The player who drew this card must tell the player on the left a statement about himself. The player on the left must then guess whether the statement is true or false. If he guesses correctly, the player who told the statement must take a sip, if he guesses incorrectly he must take a sip himself.",
+      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip, if they guess incorrectly they must take a sip themselves.",
       src: "10_of_hearts.png"
     },
     {
       title: "Poker face",
-      desc: "The player who drew this card must tell the player on the left a statement about himself. The player on the left must then guess whether the statement is true or false. If he guesses correctly, the player who told the statement must take a sip, if he guesses incorrectly he must take a sip himself.",
+      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip, if they guess incorrectly they must take a sip themselves.",
       src: "10_of_spades.png"
     },{
       title: "The clown",
@@ -475,12 +475,12 @@ export const noCards = [
     },
     {
       title: "The church servant",
-      desc: "The player who drew this card is now a church servant, and must therefore keep control of the clock. Every time the clock shows a whole ten, for example 20:40 (8:40PM), the church servant must shout «DING DONG». If the church servant misses a minute that is a whole ten, he must take a sip. The church servant has this job until someone else gets it.",
+      desc: "The player who drew this card is now a church servant, and must therefore keep control of the clock. Every time the clock shows a whole ten, for example 20:40 (8:40PM), the church servant must shout «DING DONG». If the church servant misses a whole ten, they must take a sip. The church servant has this job until someone else gets it.",
       src: "queen_of_hearts.png"
     },
     {
       title: "The church servant",
-      desc: "The player who drew this card is now a church servant, and must therefore keep control of the clock. Every time the clock shows a whole ten, for example 20:40 (8:40PM), the church servant must shout «DING DONG». If the church servant misses a minute that is a whole ten, he must take a sip. The church servant has this job until someone else gets it.",
+      desc: "The player who drew this card is now a church servant, and must therefore keep control of the clock. Every time the clock shows a whole ten, for example 20:40 (8:40PM), the church servant must shout «DING DONG». If the church servant misses a whole ten, they must take a sip. The church servant has this job until someone else gets it.",
       src: "queen_of_spades.png"
     },{
       title: "Mr. Freeze",
@@ -489,12 +489,12 @@ export const noCards = [
     },
     {
       title: "The king",
-      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by he's real name, or something else, this player must take a sip. This lasts until someone else becomes the king. ",
+      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by their real name, or something else, this player must take a sip. This lasts until someone else becomes the king.",
       src: "king_of_diamonds.png"
     },
     {
       title: "The king",
-      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by he's real name, or something else, this player must take a sip. This lasts until someone else becomes the king. ",
+      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by their real name, or something else, this player must take a sip. This lasts until someone else becomes the king. ",
       src: "king_of_hearts.png"
     },
     {

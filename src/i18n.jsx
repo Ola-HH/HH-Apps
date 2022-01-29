@@ -38,8 +38,8 @@ i18n
                 sliderInstruction: 'Choose how long each round should last',
                 sliderComment: 'seconds chosen',
                 topicBTN: 'Show new topics',
-                oneLetterBTN: 'Recieve a letter',
-                fiveLetterBTN: 'Recieve five letters',
+                oneLetterBTN: 'Receive a letter',
+                fiveLetterBTN: 'Receive five letters',
                 time: 'Time',
                 countdownComment: 'seconds left',
                 timeBTN: 'Start timer',
@@ -52,12 +52,12 @@ i18n
             },
             hm: {
                 rulesBTN: 'Show/hide rules',
-                wordBTN: 'Recieve a new word',
+                wordBTN: 'Receive a new word',
                 lives: 'lives left',
                 victory: 'Congrats, you won!',
                 loose: 'Sorry, you lost!',
                 correctWord: 'The correct word was',
-                rules: 'All participants must guess a letter. The round continues clockwise around the table. If you answer incorrectly, you must take a sip. If you are the last one to answer incorrectly, so the game is lost, you must drink up the rest of the drink you have in your glass. If you are the last one to answer correctly, so the game is won, you can hand out 5 sips to other participants.'
+                rules: 'All participants must guess a letter. The round continues clockwise around the table. If you answer incorrectly, you must take a sip. If you are the last one to answer incorrectly, so the game is lost, you have to drink up the rest of the drink you have in your glass. If you are the last one to answer correctly, so the game is won, you can hand out 5 sips to other participants.'
             }
         }
       },
