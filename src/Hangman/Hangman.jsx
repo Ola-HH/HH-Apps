@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 import { useTranslation } from "react-i18next";
 
 const Hangman = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [rules, setRules] = useState(false);
     const [currentWord, setCurrentWord] = useState([]);
     const [lives, setLives] = useState(8);
@@ -14,8 +14,11 @@ const Hangman = () => {
     const [correct, setCorrect] = useState([]);
     const [won, setWon] = useState('unknown');
 
-    const allWords = [
+    const noWords = [
         'CIDERFYLLA', 'BÅNNSKI', 'HANGOVER', 'FYLLEANGST', 'ØLBRILLER', 'DRIKKELEK', 'NATTMAT', 'DRAMAQUEEN', 'FJORTISFYLLA', 'SHOT', 'PILS', 'RUSSEBUSS', 'VORSPIEL', 'NACHSPIEL', 'SIXPACK', 'BREEZER', 'NATTKLUBB', 'UTESTED', 'MAXITAXI', 'CARLSBERG', 'GUTTASTEMNING', 'HALVLITER', 'SHOTGUN', 'CHUGGING', 'ABSOLUT', 'JAGERMEISTER', 'SNUSBOKS', 'FESTRØYKER', 'BARTENDER', 'COCKTAIL', 'GLATTCELLA', 'ALKOHOL', 'BRISEN', 'BEERPONG', 'VINKVELD', 'VINMONOPOLET', 'BLACKJACK', 'CASINO', 'AFTERSKI', 'RØLP'
+        ]
+    const enWords = [
+            'BEER', 'DRUNK', 'AFTERSKI', 'ALCOHOL', 'PARTY', 'COCKTAIL', 'BARTENDER', 'WASTED'
         ]
 
     const handleRules = () => setRules(!rules);
@@ -23,13 +26,19 @@ const Hangman = () => {
         setStarted(true)
         setWon('unknown')
         setLives(8)
-        const number = Math.floor(Math.random() * allWords.length)
-        setCurrentWord(allWords[number])
-        setCorrect(Array(allWords[number].length).fill(""))
+        if (i18n.resolvedLanguage === 'no') {
+            const number = Math.floor(Math.random() * noWords.length)
+            setCurrentWord(noWords[number])
+            setCorrect(Array(noWords[number].length).fill(""))
+        } else {
+            const number = Math.floor(Math.random() * enWords.length)
+            setCurrentWord(enWords[number])
+            setCorrect(Array(enWords[number].length).fill(""))
+        }
+        
     }
     const guess = (test) => {
         const letter = test
-        console.log(letter)
         if (currentWord.includes(letter)) {
             let position = 0;
             let updatedCorrect = correct;
@@ -55,7 +64,6 @@ const Hangman = () => {
             }
         }
     }
-
   return (
         <Stack textAlign="center" spacing={2}>
           <Typography variant="h3" color="primary">Hangman</Typography>

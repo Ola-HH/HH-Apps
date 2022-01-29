@@ -36,7 +36,7 @@ const Navigation = () => {
   let isAuthenticated = useIsAuthenticated();
 
   const { i18n, t } = useTranslation();
-  
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true)
   const closeModal = () => setOpen(false)
