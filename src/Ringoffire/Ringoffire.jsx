@@ -2,9 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 import HHButton from "../HH-Button";
+import { useTranslation } from "react-i18next";
 
 
 function Ringoffire() {
+  const { t } = useTranslation();
 
   const cards = [
     {
@@ -268,7 +270,6 @@ function Ringoffire() {
     for (let i = 0; i < 2; i++) {
       const random = Math.floor(Math.random()* cards.length)
       if (usedCards.includes(random)) {
-        console.log("fungerer")
         i--;
         continue
       }
@@ -289,11 +290,11 @@ function Ringoffire() {
       
       { done ? (
         <>
-          <HHButton click={restart} text="Start en ny runde" />
-          <Typography variant="h5" color="primary">Dere har nå vært igjennom samtlige 52 kort!</Typography>
+          <HHButton click={restart} text={t('rof.newRoundBTN')} />
+          <Typography variant="h5" color="primary">{t('rof.done')}</Typography>
         </>
       ):(
-        <HHButton click={newCard} text="Nytt kort" />
+        <HHButton click={newCard} text={t('rof.cardBTN')}/>
       )}
 
       { card > -1 && !done ? (

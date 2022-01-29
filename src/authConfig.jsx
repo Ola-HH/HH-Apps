@@ -2,7 +2,7 @@ export const msalConfig = {
     auth: {
       clientId: process.env.REACT_APP_CLIENT_ID,
       authority: "https://login.microsoftonline.com/common", 
-      redirectUri: "https://hagerupsen-hansen.no",
+      redirectUri: "http://localhost:3000",
     },
     cache: {
       cacheLocation: "sessionStorage", 

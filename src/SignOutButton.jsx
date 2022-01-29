@@ -1,6 +1,7 @@
 import React from "react";
 import { useMsal } from "@azure/msal-react";
 import { Button } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function handleLogout(instance) {
     instance.logoutRedirect().catch(e => {
@@ -8,13 +9,12 @@ function handleLogout(instance) {
     });
 }
 
-/**
- * Renders a button which, when selected, will open a popup for login
- */
 export const SignOutButton = () => {
     const { instance } = useMsal();
-
+    const { t } = useTranslation();
     return (
-        <Button variant="text" className="ml-auto" onClick={() => handleLogout(instance)}>Logg ut</Button>
+        <Button variant="text" className="ml-auto" onClick={() => handleLogout(instance)}>
+            {t('nav.logout')}
+        </Button>
     );
 }

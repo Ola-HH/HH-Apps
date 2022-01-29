@@ -12,18 +12,14 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { ModeContext } from './ModeContext';
 
-
-
 const Theme = () => {
     const [mode, setMode] = useState(localStorage.getItem("hhAppsMode"));
-    
     const [theme, setTheme] = useState(createTheme({ palette: 
         {
         mode: localStorage.getItem("hhAppsMode") === "light" ? "light" : "dark",
         primary: {main: "#2B88D8"},
         }
     }));
-
     useEffect(()=>{
         setTheme(createTheme({ palette: 
             {

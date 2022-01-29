@@ -3,8 +3,10 @@ import { Stack, Typography } from "@mui/material";
 import HHButton from "../HH-Button";
 import LetterButton from "./LetterButton";
 import { Box } from "@mui/system";
+import { useTranslation } from "react-i18next";
 
 const Hangman = () => {
+    const { t } = useTranslation();
     const [rules, setRules] = useState(false);
     const [currentWord, setCurrentWord] = useState([]);
     const [lives, setLives] = useState(8);
@@ -57,12 +59,12 @@ const Hangman = () => {
   return (
         <Stack textAlign="center" spacing={2}>
           <Typography variant="h3" color="primary">Hangman</Typography>
-          <HHButton text="Vis/skjul regler" click={handleRules} />
+          <HHButton text={t('hm.rulesBTN')} click={handleRules} />
           { rules ? (
-          <Typography variant="body1" align="center" color="primary" sx={{ border: "1px solid #2b88d8", borderRadius: 1, padding: 1}}>På rundgang skal alle deltagere gjette på hver sin bokstav. Svarer du feil må du ta en slurk. Er du sistemann til å svare feil, slik at spillet er tapt, må du drikke opp resten av drikka du har i glasset. Er du sistemann til å svare riktig, slik at spillet er vunnet, kan du dele ut 5 slurker.</Typography>
+          <Typography variant="body1" align="center" color="primary" sx={{ border: "1px solid #2b88d8", borderRadius: 1, padding: 1}}>{t('hm.rules')}</Typography>
           ):("")}
-          <HHButton text="Få nytt ord" click={newWord} />
-          <Typography variant="body1" color="primary">Dere har {lives} liv igjen</Typography>
+          <HHButton text={t('hm.wordBTN')} click={newWord} />
+          <Typography variant="body1" color="primary">{lives} {t('hm.lives')}</Typography>
           <Box alignItems="center">
             <img src={require(`./hangman-imgs/${lives}liv.png`)} width="35%" alt="liv igjen" />
           </Box>
@@ -108,11 +110,11 @@ const Hangman = () => {
             ) : ("")
             }
             {won === 'yes' ? (
-                <Typography variant="body1" color="primary">Grattis, dere vant!</Typography>
+                <Typography variant="body1" color="primary">{t('hm.victory')}</Typography>
             ) : won === 'no' ? (
                 <>
-                    <Typography variant="h4" color="primary">Beklager, dere tapte!</Typography>
-                    <Typography variant="h6" color="primary">Riktig ord var {currentWord}.</Typography>
+                    <Typography variant="h4" color="primary">{t('hm.loose')}</Typography>
+                    <Typography variant="h6" color="primary">{t('hm.correctWord')} {currentWord}.</Typography>
                 </>
             ): ("")}   
       </Stack>

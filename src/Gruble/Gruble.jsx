@@ -8,8 +8,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Divider } from "@mui/material";
 import { LinearProgress } from "@mui/material";
 import Pdf from './gruble.pdf';
+import { useTranslation } from "react-i18next";
 
 function Gruble() {
+  const { t } = useTranslation();
   const [time, setTime] = useState(75);
   const [timeLeft, setTimeLeft] = useState(75);
   const [timerActive, setTimerActive] = useState(false);
@@ -92,11 +94,11 @@ function Gruble() {
   return (
     <Stack textAlign="center" spacing={2}>
       <Typography variant="h3" color="primary">Gruble</Typography>
-      <Link variant="h7" href={Pdf} target="_blank" rel="noreferrer">Last ned grubleark her!</Link>
-      <Typography variant="h6" color="primary">Velg hvor lang tid hver runde skal vare</Typography>
+      <Link variant="h7" href={Pdf} target="_blank" rel="noreferrer">{t('gruble.download')}</Link>
+      <Typography variant="h6" color="primary">{t('gruble.sliderInstruction')}</Typography>
       <Slider onChange={handleChange} valueLabelDisplay="auto" defaultValue={75} step={15} marks min={45} max={450} />
-      <Typography variant="h7" color="primary">Du har valgt {time} sekunder</Typography>
-      <HHButton click={showTopic} text="Vis nye temaer" />
+      <Typography variant="h7" color="primary">{time} {t('gruble.sliderComment')}</Typography>
+      <HHButton click={showTopic} text={t('gruble.topicBTN')} />
     { currentTopics.length > 0 ? (
       <>
         <Box >
@@ -104,8 +106,8 @@ function Gruble() {
                 <Typography variant="h6" key={i} color="primary"> {currentTopics[i]} </Typography>
             ))}
         </Box>
-        <HHButton click={showLetter} text="Få en bokstav"/>
-        <HHButton click={showLetters} text="Få fem bokstaver" />
+        <HHButton click={showLetter} text={t('gruble.oneLetterBTN')}/>
+        <HHButton click={showLetters} text={t('gruble.fiveLetterBTN')} />
       </>
     ):''}
 
@@ -118,19 +120,19 @@ function Gruble() {
           <CloseIcon onClick={closeModal} sx={{ position: "absolute", top: 5, right: 5, cursor: "pointer"}}/>
           <Stack width={9/10} spacing={1.5} sx={{position: "relative", left: "5%", my: 1}}>
           <Typography variant="h3" color="primary">{letters}</Typography>
-          <Divider color="primary">Tid</Divider>
+          <Divider color="primary">{t('gruble.time')}</Divider>
           <LinearProgress variant="determinate" value={(time - timeLeft)/time * 100} min={0} max={100}
           sx={{
             height: 10, borderRadius: 5
           }}/>
-          <Typography variant="h7" color="primary">Det er {timeLeft} sekunder igjen</Typography>
+          <Typography variant="h7" color="primary">{timeLeft} {t('gruble.countdownComment')}</Typography>
           {!timerActive ? (
             <Stack>
-            <Button onClick={startTime} variant="outlined" sx={{mb: 2}}>Start tiden</Button>
-              <Divider variant="middle">Nye bokstaver</Divider>
-              <Button onClick={showLetter}>Få en ny bokstav</Button>
+            <Button onClick={startTime} variant="outlined" sx={{mb: 2}}>{t('gruble.timeBTN')}</Button>
+              <Divider variant="middle">{t('gruble.newLetters')}</Divider>
+              <Button onClick={showLetter}>{t('gruble.oneLetterBTN')}</Button>
               <Divider variant="middle" sx={{width: 1/2, margin: 'auto'}}/>  
-              <Button onClick={showLetters}>Få fem ny bokstaver</Button>
+              <Button onClick={showLetters}>{t('gruble.fiveLetterBTN')}</Button>
             </Stack>
             ):("")}
           </Stack>
