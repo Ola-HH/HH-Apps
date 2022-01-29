@@ -294,22 +294,22 @@ export const noCards = [
       src: "2_of_spades.png"
     },{
       title: "Category",
-      desc: "The player who drew this card chooses a category, for example football players. Then must the player say a word in the chosen category, for example Cristiano Ronaldo. The player to the left then says another word in the same category. The round continues clockwise around the table. The first player that says a word that is already mentioned or uses too much time must take two sips.",
+      desc: "The player who drew this card chooses a category, for example football players. Then the player has to say a word in the chosen category, e.g. Cristiano Ronaldo. The player to the left then says another word in the same category. The round continues clockwise around the table. The first player that says a word that is already mentioned or uses too much time must take two sips.",
       src: "3_of_clubs.png"
     },
     {
       title: "Category",
-      desc: "The player who drew this card chooses a category, for example football players. Then must the player say a word in the chosen category, for example Cristiano Ronaldo. The player to the left then says another word in the same category. The round continues clockwise around the table. The first player that says a word that is already mentioned or uses too much time must take two sips.",
+      desc: "The player who drew this card chooses a category, for example football players. Then the player has to say a word in the chosen category, e.g. Cristiano Ronaldo. The player to the left then says another word in the same category. The round continues clockwise around the table. The first player that says a word that is already mentioned or uses too much time must take two sips.",
       src: "3_of_diamonds.png"
     },
     {
       title: "The least",
-      desc: "Compare the drink you have left in your glass, can, etc. with the drink of the person to your left. The one of you who has the least left must drink up the rest.",
+      desc: "Compare the drink you have left in your glass, can, etc. with the drink of the person to your left. The one of you who has the least amount left must drink up the rest.",
       src: "3_of_hearts.png"
     },
     {
       title: "The least",
-      desc: "Compare the drink you have left in your glass, can, etc. with the drink of the person to your left. The one of you who has the least left must drink up the rest.",
+      desc: "Compare the drink you have left in your glass, can, etc. with the drink of the person to your left. The one of you who has the least amount left must drink up the rest.",
       src: "3_of_spades.png"
     },{
       title: "Journalist",
@@ -361,12 +361,12 @@ export const noCards = [
     },
     {
       title: "Category duel",
-      desc: "Turn towards the player to your left. Choose a category, such as beer brands. Say a word within this category, such as «Heineken». Then it's the person to the left's turn, before it's your turn again. The first of you two who says a word that is already mentioned or uses too much time must take a sip.",
+      desc: "Turn towards the player to your left. Choose a category, such as beer brands. Say a word within this category, e.g. «Heineken». Then it's the person to the left's turn, before it's your turn again. The first of you two who says a word that has already been mentioned or uses too much time must take a sip.",
       src: "6_of_hearts.png"
     },
     {
       title: "Category duel",
-      desc: "Turn towards the player to your left. Choose a category, such as beer brands. Say a word within this category, such as «Heineken». Then it's the person to the left's turn, before it's your turn again. The first of you two who says a word that is already mentioned or uses too much time must take a sip.",
+      desc: "Turn towards the player to your left. Choose a category, such as beer brands. Say a word within this category, e.g. «Heineken». Then it's the person to the left's turn, before it's your turn again. The first of you two who says a word that has already been mentioned or uses too much time must take a sip.",
       src: "6_of_spades.png"
     },{
       title: "The lie detector",
@@ -399,12 +399,12 @@ export const noCards = [
     },
     {
       title: "The multiply game",
-      desc: "The player who drew the card selects a number higher than 2, for example 6. (Do not select the same number as amount of players). The player then starts counting by saying one. The person on the left says two, etc. When you come to a number that is divisible by the number that was chosen, you should say «CHEERS» instead of the number. First person who says wrong or uses too much time must take three sips. If it takes too long, the player who drew the card adds a new number and starts to count again.",
+      desc: "The player who drew the card selects a number higher than 2, for example 6. (Do not select the same number as amount of players). The player then starts counting by saying one. The person on the left says two, etc. When you come to a number that is divisible by the number that was chosen, you should say «CHEERS» instead of the number. First player who answers incorrectly or uses too much time must take three sips. If it takes too long, the player who drew the card adds a new number and starts to count again.",
       src: "8_of_hearts.png"
     },
     {
       title: "The multiply game",
-      desc: "The player who drew the card selects a number higher than 2, for example 6. (Do not select the same number as amount of players). The player then starts counting by saying one. The person on the left says two, etc. When you come to a number that is divisible by the number that was chosen, you should say «CHEERS» instead of the number. First person who says wrong or uses too much time must take three sips. If it takes too long, the player who drew the card adds a new number and starts to count again.",
+      desc: "The player who drew the card selects a number higher than 2, for example 6. (Do not select the same number as amount of players). The player then starts counting by saying one. The person on the left says two, etc. When you come to a number that is divisible by the number that was chosen, you should say «CHEERS» instead of the number. First player who answers incorrectly or uses too much time must take three sips. If it takes too long, the player who drew the card adds a new number and starts to count again.",
       src: "8_of_spades.png"
     },{
       title: "The priest",
@@ -418,59 +418,59 @@ export const noCards = [
     },
     {
       title: "House number",
-      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
+      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that live on an adress with the same type of number must take two sips, including the player who drew the card.",
       src: "9_of_hearts.png"
     },
     {
       title: "House number",
-      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that lives on an adress with the same type of number must take two sips, included the player who drew the card.",
+      desc: "The player who drew this card must tell if they live on an address with an even or odd number. All players that live on an adress with the same type of number must take two sips, including the player who drew the card.",
       src: "9_of_spades.png"
     },{
       title: "Waterfall",
-      desc: "All players starts drinking at the same time. It is not allowed to stop drinking until the person who drew this card stops.",
+      desc: "All players start drinking at the same time. It is not allowed to stop drinking until the person who drew this card stops.",
       src: "10_of_clubs.png"
     },
     {
       title: "Waterfall",
-      desc: "All players starts drinking at the same time. It is not allowed to stop drinking until the person who drew this card stops.",
+      desc: "All players start drinking at the same time. It is not allowed to stop drinking until the person who drew this card stops.",
       src: "10_of_diamonds.png"
     },
     {
       title: "Poker face",
-      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip, if they guess incorrectly they must take a sip themselves.",
+      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip. If they guess incorrectly they must take a sip themselves.",
       src: "10_of_hearts.png"
     },
     {
       title: "Poker face",
-      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip, if they guess incorrectly they must take a sip themselves.",
+      desc: "The player who drew this card must tell the player on the left a statement about themselves. The player on the left must then guess whether the statement is true or false. If they guess correctly, the player who told the statement must take a sip. If they guess incorrectly they must take a sip themselves.",
       src: "10_of_spades.png"
     },{
       title: "The clown",
-      desc: "The player who drew this card is now a clown, and gets a minute to make the other players laugh. The task is over when the first person laughs. The first to laugh must take a sip. If no one laughs within 60 seconds, the clown must take three sips himself.",
+      desc: "The player who drew this card is now a clown, and gets a minute to make the other players laugh. The task is over when the first person laughs. The first to laugh must take a sip. If no one laughs within 60 seconds, the clown must take three sips.",
       src: "jack_of_clubs.png"
     },
     {
       title: "The clown",
-      desc: "The player who drew this card is now a clown, and gets a minute to make the other players laugh. The task is over when the first person laughs. The first to laugh must take a sip. If no one laughs within 60 seconds, the clown must take three sips himself.",
+      desc: "The player who drew this card is now a clown, and gets a minute to make the other players laugh. The task is over when the first person laughs. The first to laugh must take a sip. If no one laughs within 60 seconds, the clown must take three sips.",
       src: "jack_of_diamonds.png"
     },
     {
       title: "Rhyme",
-      desc: "The player who drew this card must say a word. The person on the left then says a word that rhymes with the first word. This continues clockwise around the table. The first person that says a word that has been used or uses too much time must take two sips.",
+      desc: "The player who drew this card must say a word. The person on the left then says a word that rhymes with the first word. This continues clockwise around the table. The first person who says a word that has been used or uses too much time must take two sips.",
       src: "jack_of_hearts.png"
     },
     {
       title: "Rhyme",
-      desc: "The player who drew this card must say a word. The person on the left then says a word that rhymes with the first word. This continues clockwise around the table. The first person that says a word that has been used or uses too much time must take two sips.",
+      desc: "The player who drew this card must say a word. The person on the left then says a word that rhymes with the first word. This continues clockwise around the table. The first person who says a word that has been used or uses too much time must take two sips.",
       src: "jack_of_spades.png"
     },{
       title: "The clapping game",
-      desc: "The person who drew the card must clap once. Then the person on the left should clap, etc. If you clap once, the round continues the same way. If you clap twice, the order is reversed the opposite way. The first person to clap incorrectly must take a sip.",
+      desc: "The person who drew the card must clap once. Then the person on the left should clap. Clapping once means the round continues normally in the same direction, while clapping twice turns the order the other way around. The first person to clap incorrectly must take a sip.",
       src: "queen_of_clubs.png"
     },
     {
       title: "The clapping game",
-      desc: "The person who drew the card must clap once. Then the person on the left should clap, etc. If you clap once, the round continues the same way. If you clap twice, the order is reversed the opposite way. The first person to clap incorrectly must take a sip.",
+      desc: "The person who drew the card must clap once. Then the person on the left should clap. Clapping once means the round continues normally in the same direction, while clapping twice turns the order the other way around. The first person to clap incorrectly must take a sip.",
       src: "queen_of_diamonds.png"
     },
     {
@@ -484,22 +484,22 @@ export const noCards = [
       src: "queen_of_spades.png"
     },{
       title: "Mr. Freeze",
-      desc: "Mr. Freeze can at anytime freeze completely, without moving a muscle or say anything. Everyone around the table must then do the same. The last person to freeze must take two sips. Mr. Freeze can only do this one time.",
+      desc: "Mr. Freeze can at anytime freeze completely, without moving a muscle or saying anything. Everyone around the table must then do the same. The last person to freeze must take two sips. Mr. Freeze can only do this one time.",
       src: "king_of_clubs.png"
     },
     {
       title: "The king",
-      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by their real name, or something else, this player must take a sip. This lasts until someone else becomes the king.",
+      desc: "The player who drew this card can only be addressed as «The king». Anyone who calls the king by their real name, or something else, must take a sip. This lasts until someone else becomes the king.",
       src: "king_of_diamonds.png"
     },
     {
       title: "The king",
-      desc: "The player who drew this card can only be addressed as «The king». If anyone calls the king by their real name, or something else, this player must take a sip. This lasts until someone else becomes the king. ",
+      desc: "The player who drew this card can only be addressed as «The king». Anyone who calls the king by their real name, or something else, must take a sip. This lasts until someone else becomes the king.",
       src: "king_of_hearts.png"
     },
     {
       title: "Mr. Freeze",
-      desc: "Mr. Freeze can at anytime freeze completely, without moving a muscle or say anything. Everyone around the table must then do the same. The last person to freeze must take two sips. Mr. Freeze can only do this one time.",
+      desc: "Mr. Freeze can at anytime freeze completely, without moving a muscle or saying anything. Everyone around the table must then do the same. The last person to freeze must take two sips. Mr. Freeze can only do this one time.",
       src: "king_of_spades.png"
     }
   ]
