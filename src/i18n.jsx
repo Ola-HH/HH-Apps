@@ -14,6 +14,9 @@ i18n
     resources: {
       en: {
         translation: {
+            rulesBTN: 'Show/hide rules',
+            wordBTN: 'Receive a new word',
+            correctWord: 'The correct word was',
             nav: {
                 no: 'Norwegian',
                 en: 'English',
@@ -51,18 +54,24 @@ i18n
                 newRoundBTN: 'Start a new round',
             },
             hm: {
-                rulesBTN: 'Show/hide rules',
-                wordBTN: 'Receive a new word',
                 lives: 'lives left',
                 victory: 'Congrats, you won!',
                 loose: 'Sorry, you lost!',
-                correctWord: 'The correct word was',
                 rules: 'All participants must guess a letter. The round continues clockwise around the table. If you answer incorrectly, you must take a sip. If you are the last one to answer incorrectly, so the game is lost, you have to drink up the rest of the drink you have in your glass. If you are the last one to answer correctly, so the game is won, you can hand out 5 sips to other participants.'
+            },
+            wp: {
+                victory: 'You won!',
+                loose: 'You lost',
+                tries: 'Your number of attempts was',
+                rules: 'You are going du guess the key word. Guess word by word. You can only guess real words (comming soon). In the words you guess, the letters that also are included in the key word will be displayed in blue. If they also are placed at the correct place within the word, they will be displayed in green. A letter can appear multiple times in the same word'
             }
         }
       },
       no: {
         translation: {
+            rulesBTN: 'Vis/skjul regler',
+            wordBTN: 'Få nytt ord',
+            correctWord: 'Riktig ord var',
             nav: {
                 no: 'Norsk',
                 en: 'Engelsk',
@@ -100,13 +109,16 @@ i18n
                 newRoundBTN: 'Start en ny runde'
             },
             hm: {
-                rulesBTN: 'Vis/skjul regler',
-                wordBTN: 'Få nytt ord',
                 lives: 'liv igjen',
                 victory: 'Grattis, dere vant!',
                 loose: 'Beklager, dere tapte!',
-                correctWord: 'Riktig ord var',
                 rules: 'På rundgang skal alle deltagere gjette på hver sin bokstav. Svarer du feil må du ta en slurk. Er du sistemann til å svare feil, slik at spillet er tapt, må du drikke opp resten av drikka du har i glasset. Er du sistemann til å svare riktig, slik at spillet er vunnet, kan du dele ut 5 slurker.'
+            },
+            wp: {
+                victory: 'Du vant!',
+                loose: 'Du tapte',
+                tries: 'Antall forsøk du brukte var',
+                rules: 'Du skal gjette deg frem til løsningsordet. Gjett ett og ett ord. Du kan kun gjette på ekte ord (Kommer snart). I ordene du gjetter vil bokstavene som også er med i løsningsordet bli blå. Hvis de i tillegg er plassert på riktig sted i ordet blir de grønne. En bokstav kan forekomme flere ganger i samme ord.'
             }
         }
       }

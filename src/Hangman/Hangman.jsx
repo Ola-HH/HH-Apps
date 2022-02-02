@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Stack, Typography } from "@mui/material";
 import HHButton from "../HH-Button";
-import LetterButton from "./LetterButton";
+import LetterButton from "../LetterButton";
 import { Box } from "@mui/system";
 import { useTranslation } from "react-i18next";
 
@@ -67,11 +67,11 @@ const Hangman = () => {
   return (
         <Stack textAlign="center" spacing={2}>
           <Typography variant="h3" color="primary">Hangman</Typography>
-          <HHButton text={t('hm.rulesBTN')} click={handleRules} />
+          <HHButton text={t('rulesBTN')} click={handleRules} />
           { rules ? (
           <Typography variant="body1" align="center" color="primary" sx={{ border: "1px solid #2b88d8", borderRadius: 1, padding: 1}}>{t('hm.rules')}</Typography>
           ):("")}
-          <HHButton text={t('hm.wordBTN')} click={newWord} />
+          <HHButton text={t('wordBTN')} click={newWord} />
           <Typography variant="body1" color="primary">{lives} {t('hm.lives')}</Typography>
           <Box alignItems="center">
             <img src={require(`./hangman-imgs/${lives}liv.png`)} width="35%" alt="liv igjen" />
@@ -122,7 +122,7 @@ const Hangman = () => {
             ) : won === 'no' ? (
                 <>
                     <Typography variant="h4" color="primary">{t('hm.loose')}</Typography>
-                    <Typography variant="h6" color="primary">{t('hm.correctWord')} {currentWord}.</Typography>
+                    <Typography variant="h6" color="primary">{t('correctWord')} {currentWord}.</Typography>
                 </>
             ): ("")}   
       </Stack>

@@ -22,6 +22,9 @@ const Home = () => {
         <Button component={RouterLink} to="ringoffire">
             Ring of fire
         </Button>
+        <Button component={RouterLink} to="wordpuzz">
+            WordPuzz (BETA)
+        </Button>
       </ButtonGroup>
     </Stack>
   );
