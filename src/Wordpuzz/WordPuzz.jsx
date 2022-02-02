@@ -100,14 +100,23 @@ const WordPuzz = () => {
       setGuesses(temporaryGuesses);
       setRend(!rend)
     }
-
-    const handleGuess = () => {
+    const allEnglishWords = require('an-array-of-english-words');
+    const handleGuess = async () => {
       let correct = 0;
       let temporaryGuesses = guesses;
       for (let i = 0; i < 5; i++) {
         if (temporaryGuesses[currentGuess][i] === "") {
           alert("Du må fylle ut alle fem bokstavene for å gjette!")
           return
+        }
+      }
+
+      const gl = guesses[currentGuess];
+      let guessedWord = gl[0]+gl[1]+gl[2]+gl[3]+gl[4]
+      if (i18n.resolvedLanguage === "en") {
+        if (!allEnglishWords.includes(guessedWord.toLowerCase())) {
+          alert(`Ooops! We couldt find ${guessedWord.toLowerCase()} in the dictionary!`)
+          return;
         }
       }
 
@@ -286,7 +295,7 @@ const WordPuzz = () => {
             </Stack>
             </>
           )}
-          <Typography sx={{fontSize: 0}}>{rend}</Typography>
+          <Typography variant="h6" color="transparent">{rend.toString()}</Typography>
       </Stack>
   )
 }
