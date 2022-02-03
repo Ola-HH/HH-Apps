@@ -295,7 +295,7 @@ const WordPuzz = () => {
             </Stack>
             </>
           )}
-          <Typography variant="h6" color="transparent">{rend.toString()}</Typography>
+          <Typography variant="h6" color="transparent" sx={{display: "none"}}>{rend.toString()}</Typography>
       </Stack>
   )
 }
