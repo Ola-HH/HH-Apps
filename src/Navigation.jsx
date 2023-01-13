@@ -1,45 +1,14 @@
 import { Link as RouterLink } from "react-router-dom";
-import { Avatar, Button, ButtonGroup, Dialog, DialogTitle, Divider, Popover, Typography} from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
+import { Avatar, Button, ButtonGroup, Divider, Popover} from "@mui/material";
 import { Box } from "@mui/system";
-import { useIsAuthenticated, useMsal } from "@azure/msal-react";
-import { SignInButton } from "./SignInButton";
-import { SignOutButton } from "./SignOutButton";
 import { useContext, useState } from "react";
 import { ModeContext } from "./ModeContext";
 import { DarkModeOutlined, LightModeOutlined, LanguageOutlined } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-
-function ProfileContent() {
-  const { accounts } = useMsal();
-
-  const name = accounts[0].name;
-  return (
-      <>
-          {name}
-      </>
-  );
-};
-
-function FirstName() {
-  const { accounts } = useMsal();
-
-  const firstname = accounts[0].name.replace(/ .*/,'');
-  return (
-      <>
-          {firstname}
-      </>
-  );
-};
+import { UserContext } from "./UserContext";
 
 const Navigation = () => {
-  let isAuthenticated = useIsAuthenticated();
-
   const { i18n, t } = useTranslation();
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true)
-  const closeModal = () => setOpen(false)
 
   const {mode, setMode} = useContext(ModeContext)
   const handleMode = () => {
@@ -96,22 +65,8 @@ const Navigation = () => {
               </Button>
             </ButtonGroup>
           </Popover>
-
-          { isAuthenticated ? <Typography color="primary" onClick={handleOpen} sx={{
-            position: "absolute", right: 10, cursor: "pointer"
-          }}><ProfileContent /></Typography> : <Box sx={{position: "absolute", right: "10px"}}>
-            <SignInButton/></Box>}
+          <UserContext/>
       </Box>
-      <Dialog
-      fullWidth
-      open={open}
-      onClose={closeModal}
-      sx={{textAlign: "center", py: "20px"}}
-      >
-        <DialogTitle color="primary" mb={10}>{t('nav.hi')}, <FirstName/> </DialogTitle>
-        <SignOutButton/>
-        <CloseIcon onClick={closeModal} sx={{ position: "absolute", top: 5, right: 5, cursor: "pointer"}}/>
-      </Dialog>
     </>
   );
 }
