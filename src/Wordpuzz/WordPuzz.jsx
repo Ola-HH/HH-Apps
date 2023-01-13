@@ -65,7 +65,7 @@ const WordPuzz = () => {
     useEffect(() => {
       document.addEventListener("keydown", keyPress);
       return () => document.removeEventListener("keydown", keyPress);
-    }, [currentLetter, guesses]);
+    }, [currentLetter, guesses, keyPress]);
 
     const newWord = () => {
       if (i18n.resolvedLanguage === "no") {
