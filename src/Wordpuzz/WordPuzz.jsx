@@ -44,29 +44,6 @@ const WordPuzz = () => {
     const closeModal = () => setModalOpen(false);
     const handleRules = () => setRules(!rules);
 
-    const keyPress = (e) => {
-        if (e.key === 'Enter') {
-          handleGuess();
-        } else if (e.key === 'Backspace') {
-          handleRemove();
-        } else if (alphabet.includes(e.key.toUpperCase())) {
-          handleLetter(e.key);
-        } else if (e.key === "ArrowRight") {
-          if (currentLetter < 4) {
-            setCurrentLetter(currentLetter + 1);
-          }
-        } else if (e.key === "ArrowLeft") {
-          if (currentLetter > 0) {
-            setCurrentLetter(currentLetter - 1);
-          }
-        }
-      }
-  
-    useEffect(() => {
-      document.addEventListener("keydown", keyPress);
-      return () => document.removeEventListener("keydown", keyPress);
-    }, [currentLetter, guesses, keyPress]);
-
     const newWord = () => {
       if (i18n.resolvedLanguage === "no") {
         setWord(noWords[Math.floor(Math.random()*noWords.length)].toUpperCase())
