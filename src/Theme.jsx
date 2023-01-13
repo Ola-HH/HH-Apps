@@ -4,9 +4,7 @@ import Navigation from './Navigation';
 import Home from './Home';
 import LiarsDice from './Liarsdice/LiarsDice';
 import Gruble from './Gruble/Gruble';
-import Hangman from './Hangman/Hangman';
 import Ringoffire from './Ringoffire/Ringoffire';
-import WordPuzz from './Wordpuzz/WordPuzz';
 import NoMatch from './NoMatch';
 import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
@@ -41,9 +39,7 @@ const Theme = () => {
                         <Route exact path="/" element={<Home />} />
                         <Route path="liarsdice" element={<LiarsDice />} />
                         <Route path="gruble" element={<Gruble />} />
-                        <Route path="hangman" element={<Hangman />} />
                         <Route path="ringoffire" element={<Ringoffire />} />
-                        <Route path="wordpuzz" element={<WordPuzz />} />
                         <Route path="*" element={<NoMatch />} />
                     </Routes>
                 </Container>
