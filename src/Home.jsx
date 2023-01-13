@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
+
   return (
     <Stack textAlign="center" spacing={2}>
       <Typography variant="h3" color="primary">{t('home.welcome')}</Typography>
