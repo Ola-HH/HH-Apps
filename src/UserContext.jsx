@@ -8,7 +8,7 @@ import { gapi } from 'gapi-script';
 export const UserContext = () => {
   const { t } = useTranslation();
   const clientId = '47690181877-7bls7frkubm8e8vbhtb3263l7sesdct1.apps.googleusercontent.com';
-  const [ profile, setProfile ] = useState([]);
+  const [ profile, setProfile ] = useState(null);
   useEffect(() => {
     const initClient = () => {
           gapi.client.init({
