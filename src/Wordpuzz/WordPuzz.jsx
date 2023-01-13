@@ -7,7 +7,6 @@ import BackspaceOutlinedIcon from '@mui/icons-material/BackspaceOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import KeyboardButton from "./Keyboard-Button";
 import { noWords, enWords } from "./Words";
-import { useCallback } from "react";
 
 const WordPuzz = () => {
     const { t, i18n} = useTranslation();
