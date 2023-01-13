@@ -6,7 +6,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 
 export const UserContext = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   const clientId = '47690181877-7bls7frkubm8e8vbhtb3263l7sesdct1.apps.googleusercontent.com';
   const [ profile, setProfile ] = useState([]);
   useEffect(() => {
