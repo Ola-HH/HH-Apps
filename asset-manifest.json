@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1a8a0596.css",
-    "main.js": "/static/js/main.720dd863.js",
+    "main.js": "/static/js/main.549e512e.js",
     "static/js/787.b69586ea.chunk.js": "/static/js/787.b69586ea.chunk.js",
     "static/media/queen_of_clubs.png": "/static/media/queen_of_clubs.ef480115313c1c393699.png",
     "static/media/king_of_hearts.png": "/static/media/king_of_hearts.67c7a87603fdc5b5e2f7.png",
@@ -61,26 +61,18 @@
     "static/media/2_of_hearts.png": "/static/media/2_of_hearts.c2cb81fb3d816683e15a.png",
     "static/media/2_of_diamonds.png": "/static/media/2_of_diamonds.a51b192d2f2ba1fc1d53.png",
     "static/media/united-kingdom.png": "/static/media/united-kingdom.b9a2ba74e5f8a55977e7.png",
-    "static/media/0liv.png": "/static/media/0liv.33d605e1b1e9a5830a28.png",
-    "static/media/1liv.png": "/static/media/1liv.516b81fd5b5ff01e9592.png",
     "static/media/norway.png": "/static/media/norway.eadd953eb0fd5d3bae72.png",
-    "static/media/2liv.png": "/static/media/2liv.db0131ae943971139d41.png",
-    "static/media/3liv.png": "/static/media/3liv.7d4c104015f342977798.png",
     "static/media/6dice.png": "/static/media/6dice.3c12608da1cc98c93a6c.png",
     "static/media/5dice.png": "/static/media/5dice.dd1630990898fab4cd75.png",
-    "static/media/5liv.png": "/static/media/5liv.0adf064efb84a436438e.png",
-    "static/media/4liv.png": "/static/media/4liv.8fa33174f6ce32fe7b70.png",
-    "static/media/7liv.png": "/static/media/7liv.d481d2fcff23eb04a783.png",
-    "static/media/6liv.png": "/static/media/6liv.b7a63d56a36c7a011b6f.png",
     "static/media/3dice.png": "/static/media/3dice.8a0a83c2a50c6eee35e4.png",
     "static/media/4dice.png": "/static/media/4dice.8e794482b0005bae18b9.png",
     "index.html": "/index.html",
     "main.1a8a0596.css.map": "/static/css/main.1a8a0596.css.map",
-    "main.720dd863.js.map": "/static/js/main.720dd863.js.map",
+    "main.549e512e.js.map": "/static/js/main.549e512e.js.map",
     "787.b69586ea.chunk.js.map": "/static/js/787.b69586ea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8a0596.css",
-    "static/js/main.720dd863.js"
+    "static/js/main.549e512e.js"
   ]
 }
